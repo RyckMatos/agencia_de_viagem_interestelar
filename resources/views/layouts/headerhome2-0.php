@@ -1,5 +1,8 @@
 <?php 
     session_start();
+    use Agencia\server;
+    if(!isset($_SESSION['banco']))
+        header('Location: \agencia_de_viagem_interestelar\app\model\VerificaBancoDados.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -54,7 +57,7 @@
                         <div class="dropdown">
                             <p>Inbox <span class="fa fa-inbox"></span></p>
                             <p>Settings <span class="fa fa-gear"></span></p>
-                            <a href="\agencia_de_viagem_interestelar\resources\php\desconectar.php"><p>Sign Out <span class="fa fa-sign-out"></span></p></a>
+                            <a href="\agencia_de_viagem_interestelar\app\Controller\DesconectarUsuario.php"><p>Sign Out <span class="fa fa-sign-out"></span></p></a>
                         </div>
                     </div>'
                 ?>

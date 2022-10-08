@@ -34,7 +34,7 @@
             </div>
         </div> -->
         <div class="form-container log-in-container">
-            <form action="/agencia_de_viagem_interestelar/database/VerificarUsuario.php" method="POST" class="form login">
+            <form action="/agencia_de_viagem_interestelar/app/model/VerificarUsuario.php" method="POST" class="form login">
                 <h1>Login</h1>
                 <?php if(isset($_SESSION['msg_login'])) echo '<p style="width: 100%; text-align: center; font-weight: 500; background-color: #ff0000d9; padding: 10px;">'.$_SESSION['msg_login'].' </p>' ?>
                 <div class="form-field">

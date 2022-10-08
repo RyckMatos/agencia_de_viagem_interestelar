@@ -14,7 +14,7 @@
             </svg>
         </div>
         <div class="form-container cadastro-container">
-            <form action="/agencia_de_viagem_interestelar/database/InserirUsuario.php" method="POST" class="form cadastro">
+            <form action="/agencia_de_viagem_interestelar/app/Controller/InserirUsuario.php" method="POST" class="form cadastro">
                 <h1 class="w-100">Cadastro</h1>
                 <?php if(isset($_SESSION['msg_cadastro'])) echo '<p style="width: 100%; text-align: center; font-weight: 500; background-color: #ff0000d9; padding: 10px;">'.$_SESSION['msg_cadastro'].' </p>' ?>
                 <div class="form-field w-50">
