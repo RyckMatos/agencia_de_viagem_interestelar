@@ -3,7 +3,7 @@
     desconecta();
     function desconecta() {
         session_destroy();
-        header('Location: /agencia_de_viagem_interestelar/resources/views/home2-0.php');
+        header('Location: /agencia-de-viagem-interestelar/resources/views/home2-0.php');
         die();
     }
 ?>

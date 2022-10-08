@@ -15,20 +15,20 @@
             $_SESSION['tentativa'] = 1;
         if(md5($senha) == $info[0]['senha'] && $info != null && $_SESSION['tentativa'] < 3) {
             $_SESSION['user'] = $info;
-            header('Location: /agencia_de_viagem_interestelar/resources/views/home2-0.php');
+            header('Location: /agencia-de-viagem-interestelar/resources/views/home2-0.php');
             die();
         } elseif($_SESSION['tentativa'] < 3) {
             $_SESSION['email'] = $email;
             $_SESSION['tentativa'] = 1 + $_SESSION['tentativa'];
             $_SESSION['msg_login'] = 'Senha ou email esta incorreto, tentativa '.($_SESSION['tentativa']-1);
 
-            header('Location: /agencia_de_viagem_interestelar/resources/views/login.php');
+            header('Location: /agencia-de-viagem-interestelar/resources/views/login.php');
             die();
         } else {
             $_SESSION['tentativa'] = 1 + $_SESSION['tentativa'];
             $_SESSION['msg_login'] = 'Errou 3 vezes, tente novamente mais tarde';
 
-            header('Location: /agencia_de_viagem_interestelar/resources/views/login.php');
+            header('Location: /agencia-de-viagem-interestelar/resources/views/login.php');
             die();
         }
     }

@@ -30,7 +30,7 @@
         } else {
             $_SESSION['msg_cadastro'] = 'Senhas incompatíveis';
 
-            header('Location: /agencia_de_viagem_interestelar/resources/views/cadastro.php');
+            header('Location: /agencia-de-viagem-interestelar/resources/views/cadastro.php');
             die();
         }
         $created_at = date('Y-m-d H:i:s');
@@ -56,12 +56,12 @@
             $info = $querySelector->fetchAll();
             $_SESSION['user'] = $info;
 
-            header('Location: /agencia_de_viagem_interestelar/resources/views/home2-0.php');
+            header('Location: /agencia-de-viagem-interestelar/resources/views/home2-0.php');
             die();
         } else {
             $_SESSION['msg_cadastro'] = 'Email ja cadastrado!';
 
-            header('Location: /agencia_de_viagem_interestelar/resources/views/cadastro.php');
+            header('Location: /agencia-de-viagem-interestelar/resources/views/cadastro.php');
             die();
         }
     }
