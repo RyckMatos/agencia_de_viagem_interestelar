@@ -1,6 +1,7 @@
 <?php
     namespace App\Controllers;
-    class UserController {
+    class UserController extends Controller
+    {
         public function index() {
             
         }

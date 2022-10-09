@@ -1,9 +1,15 @@
 <?php
-    class HomeController
+    namespace App\Controllers;
+    class HomeController extends Controller
     {
+        public function __construct()
+        {
+            $this->view = new \Resources\Views\MainView('home');
+        }
+
         public function index()
         {
-            return view('home2-0');
+            $this->view->render(array('nomeDaVariavel'=>''));
         }
     }
     

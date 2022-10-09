@@ -38,6 +38,6 @@
         $_SESSION['msgBanco'] = 'Banco criado com sucesso!';
     }
     
-    header("Location: /agencia_de_viagem_interestelar/resources/views/home2-0.php");
+    header("Location: /agencia_de_viagem_interestelar/");
     
 ?>

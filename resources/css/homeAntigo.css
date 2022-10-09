@@ -1,0 +1,80 @@
+/* ============================== MAIN ============================== */
+
+main{
+    width: 70%;
+    max-width: 1536px;
+    min-height: 1080px;/*trocar para auto*/
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Clear floats after the columns */
+main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p{
+    font-size: 18px;
+}
+
+h5{
+    font-size: 15px;
+}
+  
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+.leftcolumn h5{
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+  
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+.rightcolumn h2, .rightcolumn h3{
+    margin-bottom: 15px;
+}
+  
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+  
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1536px) {
+    main{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    main{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+}
