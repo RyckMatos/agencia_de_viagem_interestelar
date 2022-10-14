@@ -1,7 +1,6 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['banco']))
-        header('Location: \agencia_de_viagem_interestelar\app\model\VerificaBancoDados.php');
+    // if(!isset($_SESSION['banco']))
+    //     header('Location: \agencia_de_viagem_interestelar\app\model\VerificaBancoDados.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,9 +8,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $titulo_site ?></title>
-    <link rel="stylesheet" href="\agencia_de_viagem_interestelar\resources\css\<?php echo $arr['style'] ?>">
-    <link rel="stylesheet" href="\agencia_de_viagem_interestelar\resources\css\<?php echo $link_css ?>">
+    <title><?php echo self::titulo; ?></title>
+    <link rel="stylesheet" href="<?php echo SITE_CSS.$arr['link_css_base'] ?>">
+    <link rel="stylesheet" href="<?php echo SITE_CSS.$arr['link_css'] ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
@@ -37,9 +36,9 @@
     <header>
         <div class="elementor-background-header-overlay"></div>
         <div class="container-header">
-            <a href="\agencia_de_viagem_interestelar\resources\views\home2-0.php">
+            <a href="<?php echo SITE ?>">
                 <div class="titulo-site">
-                    <h1>My Website</h1>
+                    <h1>Space Agency</h1>
                     <p>Description my website.</p>
                 </div>
             </a>
@@ -47,16 +46,16 @@
                 <a href="#">Link</a>
                 <a href="#">Link</a>
                 <a href="#">Link</a>
-                <?php if(!isset($_SESSION['user'])) echo '<a class="link-login" href="\agencia_de_viagem_interestelar\resources\views\login.php" style="float:right;">Login</a>' ?>
-                <?php if(isset($_SESSION['user']) && $_SESSION['user'] != null) echo 
+                <?php if(!isset($user)) echo '<a class="link-login" href="'.SITE.'/login" style="float:right;">Login</a>' ?>
+                <?php if(isset($user) && $user != null) echo 
                     '<div class="menu">
-                        <div class="title" onclick="f()"><p>'.$nome = $_SESSION["user"][0]["nome"].'</p> <img class="perfil-login" src="https://th.bing.com/th/id/R.36e933016f63d1d161332e11778ab681?rik=eUa13KLBzzhmEA&amp;pid=ImgRaw&amp;r=0" alt="desconectar"> <span class="fa fa-bars"></span>
+                        <div class="title" onclick="f()"><p>'.$nome = $user['nome'].'</p> <img class="perfil-login" src="https://th.bing.com/th/id/R.36e933016f63d1d161332e11778ab681?rik=eUa13KLBzzhmEA&amp;pid=ImgRaw&amp;r=0" alt="desconectar"> <span class="fa fa-bars"></span>
                             <div class="arrow"></div>
                         </div>
                         <div class="dropdown">
                             <p>Inbox <span class="fa fa-inbox"></span></p>
                             <p>Settings <span class="fa fa-gear"></span></p>
-                            <a href="\agencia_de_viagem_interestelar\app\Controller\DesconectarUsuario.php"><p>Sign Out <span class="fa fa-sign-out"></span></p></a>
+                            <a href="'.SITE.'/user/logout"><p>Sign Out <span class="fa fa-sign-out"></span></p></a>
                         </div>
                     </div>'
                 ?>

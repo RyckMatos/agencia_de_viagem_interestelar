@@ -1,22 +1,19 @@
 <?php
-    session_start();
-    $HOST = "localhost";
-    $USER = "root";
-    $PASS = "";
-    $DB = "agencia_de_viagem";
+    // session_start();
 
-    $conn = mysqli_connect($HOST, $USER, $PASS, $DB) or die("Falha na conexão: " . $conn->connect_error);
-
+    $conn = mysqli_connect(HOST, USER, PASSWORD, DATABASE) or die("Falha na conexão");
     $table = 'users';
     $result = mysqli_query($conn, "SHOW TABLES LIKE '$table'");
     $tableExists = $result && $result->num_rows > 0;
 
     if ($tableExists) {
-        $_SESSION['banco'] = true;
-        $_SESSION['msgBanco'] = 'Banco ja existente!';
+        // $_SESSION['banco'] = true;
+        // $_SESSION['msgBanco'] = 'Banco ja existente!';
     } else {
         $sql = "CREATE TABLE users (
             id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            `status` VARCHAR(255) NOT NULL COMMENT '0 = desativado, 1 = ativado, 2 = admin',
+            token VARCHAR(255) NOT NULL UNIQUE,
             nome VARCHAR(255) NOT NULL,
             sobrenome VARCHAR(255) NOT NULL,
             email VARCHAR(255) NOT NULL UNIQUE,
@@ -34,10 +31,10 @@
         $conn->query($sql);
 
         $conn->close();
-        $_SESSION['banco'] = true;
-        $_SESSION['msgBanco'] = 'Banco criado com sucesso!';
+        // $_SESSION['banco'] = true;
+        // $_SESSION['msgBanco'] = 'Banco criado com sucesso!';
     }
     
-    header("Location: /agencia_de_viagem_interestelar/");
+    // header("Location: /agencia_de_viagem_interestelar/");
     
 ?>
