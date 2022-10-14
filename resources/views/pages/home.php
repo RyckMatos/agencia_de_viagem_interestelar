@@ -1,7 +1,5 @@
 <?php 
-    $titulo_site = 'Home Page';
-    $link_css_base = 'style.css';
-    $link_css = 'home.css';
+    
 ?>
 
 <main> 

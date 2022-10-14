@@ -1,0 +1,6 @@
+{
+    "require": {
+        "nesbot/carbon": "^2.62",
+        "phpmailer/phpmailer": "^6.6"
+    }
+}

@@ -1,29 +1,41 @@
 <?php
     namespace Resources\Views;
+
+    use App\Models\HomeModel;
+
     class MainView
     {
-        private $fileName;
-        private $style;
-        private $style2;
+        // private $fileName;
         private $header;
         private $footer;
 
-        public function __construct($fileName, $style = 'style', $style2 = '', $header = 'header', $footer = 'footer')
+        const titulo = 'Space Agency';
+
+        public function __construct($header = 'header', $footer = 'footer')
         {
-            $this->fileName = $fileName;
-            $this->style = $style;
-            $this->style2 = $style2;
+            // $this->fileName = $fileName;
             $this->header = $header;
             $this->footer = $footer;
         }
-
-        public function render($arr = [])
+        
+        public function render($fileName, $arr = [])
         {
-            include('pages/'.$this->fileName.'.php');
-            include('./css/'.$this->style.'.css');
-            include('./css/'.$this->style2.'.css');
+            $user = null;
+            if(isset($_SESSION['token'])) {
+                $user = HomeModel::verificaEmail($_SESSION['token']);
+                if (!isset($_SESSION['time']))
+                    $_SESSION['time'] = time();
+                if (isset($_SESSION['time']) && (time() - $_SESSION['time'] > 172800)) {
+                    session_unset(); 
+                    session_destroy(); 
+        
+                    $_SESSION['time'] = time();
+                }
+            }              
+
             include('layouts/'.$this->header.'.php');
-            include('layouts/'.$this->footer.'.php');
+            include('pages/'.$fileName.'.php');
+            include('layouts/'.$this->footer.'.php'); 
         }
     }
     
