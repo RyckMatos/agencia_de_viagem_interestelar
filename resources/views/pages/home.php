@@ -1,8 +1,7 @@
 <?php 
     $titulo_site = 'Home Page';
-    $link_css_base = 'style2-0.css';
-    $link_css = 'home2-0.css';
-    include('layouts/headerhome2-0.php');
+    $link_css_base = 'style.css';
+    $link_css = 'home.css';
 ?>
 
 <main> 
@@ -52,5 +51,3 @@
         </div>
     </div>
 </main>
-
-<?php include('layouts/footer.php'); ?>

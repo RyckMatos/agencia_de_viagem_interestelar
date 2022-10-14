@@ -2,7 +2,7 @@
     $titulo_site = 'Login Page';
     $link_css_base = 'styleLogin.css';
     $link_css = 'login.css';
-    include('layouts/headerhome2-0.php');
+    include('resources\views\layouts\header.php');
 
     if(isset($_SESSION['tentativa']) && $_SESSION['tentativa'] > 3) {
         if (!isset($_SESSION['time']))
@@ -53,4 +53,4 @@
     </div>
 </main>
 
-<?php include('layouts/footer.php'); ?>
+<?php include('resources\views\layouts\footer.php'); ?>
