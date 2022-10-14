@@ -1,11 +1,8 @@
-/* ============================== MAIN ============================== */
+/* =============== MAIN =============== */
 
 main{
-    width: 70%;
-    max-width: 1536px;
     min-height: 1080px;/*trocar para auto*/
     height: auto;
-    margin: 0 auto;
 }
 
 /* Clear floats after the columns */
@@ -23,58 +20,255 @@ h5{
     font-size: 15px;
 }
   
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-    float: left;
-    width: 75%;
+/* =============== CARD PRINCIPAL =============== */
+.main-container {   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
 }
 
-.leftcolumn h5{
+.main-container h5{
     margin-top: 2px;
     margin-bottom: 8px;
 }
-  
-/* Right column */
-.rightcolumn {
-    float: left;
-    width: 25%;
-    background-color: #f1f1f1;
-    padding-left: 20px;
-}
 
-.rightcolumn h2, .rightcolumn h3{
-    margin-bottom: 15px;
-}
-  
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
+.container-title{
     width: 100%;
-    padding: 20px;
-    margin-bottom: 10px;
-}
-  
-/* Add a card effect for articles */
-.card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-@media screen and (max-width: 1536px) {
-    main{
+.container-title hr{
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: rgb(180, 0, 0);
+    height: 3px;
+    border: none;
+    border-radius: 60px;
+}
+
+.card {
+    width: calc(50% - 24px);
+    max-width: 550px;
+    /* background-color: white; */
+    /* padding: 20px; */
+    margin: 40px 12px;
+    /* margin: 0 auto; */
+    /* margin-top: 20px; */
+}
+
+.card h2 {
+    text-align: center;
+    margin: 25px 0;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.card p {
+    text-align: justify;
+    font-size: 15px;
+    word-spacing: 4px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+}
+
+.button-learn-more {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: rgb(180, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 130px;
+}
+
+.button-learn-more:hover {
+    background-color: rgb(170, 0, 0);
+}
+.button-learn-more:active {
+    background-color: rgb(160, 0, 0);
+}
+
+.fakeimg {
+    width: 100%;
+    height: 55%;
+}
+
+.fakeimg img{
+    /* background-color: #aaa; */
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    max-height: 308px;
+    /* height: 80%; */
+    /* padding: 20px; */
+    /* margin-bottom: 10px; */
+}
+
+/* =============== CONHEÇA MAIS =============== */
+.elementor-background-saiba-mais-overlay{
+    width: 100vw;
+    height: 500px;
+    background-image: url('https://images2.alphacoders.com/565/565696.jpg');
+    background-attachment: fixed;
+    /* background-position: top center; */
+    /* background-size: cover; */
+}
+
+.container-saiba-mais {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 120px;
+    justify-content: space-evenly;
+}
+
+.card-saiba-mais {
+    color: white;
+    max-width: 550px;
+}
+
+.card-saiba-mais h1 {
+    font-size: 61px;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: 1.5px;
+}
+
+.card-saiba-mais hr {
+    width: 47%;
+    margin: 25px auto;
+    margin-left: 0;
+    background-color: rgb(180, 0, 0);
+    height: 3px;
+    border: none;
+    border-radius: 60px;
+}
+
+.card-saiba-mais p {
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.card-saiba-mais a {
+    margin-left: 0;
+}
+
+/* =============== CARD PAGAMENTO =============== */
+.card-pagamento {
+    display: flex;
+    width: 100%;
+    max-width: 1140px;
+    height: 480px;
+    margin: 80px auto;
+    /* flex-wrap: wrap; */
+}
+.content-card-pagamento, .card-double-img, .card-single-img {
+    padding: 10px;
+}
+
+.content-card-pagamento {
+    width: 33.3%;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    /* margin-right: 10px; */
+}
+
+.content-card-pagamento h2{
+    color: #222222;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.content-card-pagamento p{
+    font-size: 15px;
+    color: #7A7A7A;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content-card-pagamento .button-learn-more {
+    margin: 0;
+}
+
+.card-double-img {
+    width: 33%;
+}
+
+.card-double-img img {
+    width: 100%;
+    min-width: 196px;
+    height: calc(50% - 10px);
+}
+
+.card-double-img img:first-of-type {
+    margin-bottom: 20px;
+}
+
+.card-single-img {
+    width: 32.7%;
+}
+
+.card-single-img img {
+    width: 100%;
+    min-width: 262px;
+    height: 100%;
+}
+
+/* @media screen and (max-width: 1536px) {
+    .card{
         width: 80%;
     }
-}
-@media screen and (max-width: 1024px) {
-    main{
-        width: 90%;
+} */
+@media screen and (max-width: 800px) {
+    .elementor-background-saiba-mais-overlay{
+        background-attachment: initial;
+        height: auto;
     }
 }
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
+@media screen and (max-width: 768px) {
+    .topnav{
+        display: flex;
+    }
+    .card{
+        width: 100%;
+        max-width: 747px;
+    }
+    .container-saiba-mais {
+        flex-wrap: wrap;
+    }
+    .card-saiba-mais{
+        margin: 0 12px;
+    }
+    .card-saiba-mais a {
+        margin-bottom: 25px;
+    }
+    .fakeimg img{
+        max-width: 747px;
+        max-height: 419px;
+    }
+    .card-pagamento {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .content-card-pagamento {
+        width: 100%;
+    }
+    .card-double-img {
+        width: 100%;
+    }
+    .card-single-img {
+        width: 100%;
+        height: 860px;
     }
 }
