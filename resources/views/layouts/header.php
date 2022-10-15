@@ -1,6 +1,5 @@
 <?php
-    // if(!isset($_SESSION['banco']))
-    //     header('Location: \agencia_de_viagem_interestelar\app\model\VerificaBancoDados.php');
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -59,7 +58,6 @@
                         </div>
                     </div>'
                 ?>
-                
             </div>
         </div>
     </header>

@@ -25,6 +25,7 @@
                 $user = HomeModel::verificaEmail($_SESSION['token']);
                 if (!isset($_SESSION['time']))
                     $_SESSION['time'] = time();
+                    
                 if (isset($_SESSION['time']) && (time() - $_SESSION['time'] > 172800)) {
                     session_unset(); 
                     session_destroy(); 
