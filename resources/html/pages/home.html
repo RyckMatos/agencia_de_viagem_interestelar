@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interestelar </title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">     <!-- Estrutura do Estilo-->
+    <link rel="stylesheet" type="text/css" href="../css/home.css">      <!-- Estrutura da Página-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://data.whicdn.com/images/194006120/original.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>
+        function f() {
+            document.getElementsByClassName('dropdown')[0].classList.toggle('down');
+            document.getElementsByClassName('arrow')[0].classList.toggle('gone');
+            if (document.getElementsByClassName('dropdown')[0].classList.contains('down')) {
+                setTimeout(function() {
+                document.getElementsByClassName('dropdown')[0].style.overflow = 'visible'
+                }, 500)
+            } else {
+                document.getElementsByClassName('dropdown')[0].style.overflow = 'hidden'
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- Estrutra do Cabeçalho-->
+    <header>
+        <div class="elementor-background-header-overlay"></div>
+        <div class="container-header">
+            <a href="C:\Users\aldre\OneDrive\Área de Trabalho\Faculdade\6° - Desenvolvimento de Software para Web\agencia_de_viagem_interestelar\resources\html\pages\home.html">
+                <div class="titulo-site">
+                    <h1>Space Agency</h1>
+                    <p>Description my website.</p>
+                </div>
+            </a>
+            <div class="topnav">
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a class="link-login" href="C:\Users\aldre\OneDrive\Área de Trabalho\Faculdade\6° - Desenvolvimento de Software para Web\agencia_de_viagem_interestelar\resources\html\pages\login.html" style="float:right;">Login</a>
+                    <!--<div class="menu">
+                        <div class="title" onclick="f()"><p>nome</p> <img class="perfil-login" src="https://th.bing.com/th/id/R.36e933016f63d1d161332e11778ab681?rik=eUa13KLBzzhmEA&amp;pid=ImgRaw&amp;r=0" alt="desconectar"> <span class="fa fa-bars"></span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="dropdown">
+                            <p>Inbox <span class="fa fa-inbox"></span></p>
+                            <p>Settings <span class="fa fa-gear"></span></p>
+                            <a href=""><p>Sign Out <span class="fa fa-sign-out"></span></p></a>
+                        </div>
+                    </div> -->
+                
+            </div>
+        </div>
+    </header>
+<!-- Estrutura da Home-->
+    <main> 
+        <div class="main-container">
+            <div class="container-title">
+                <h1>ESPAÇO</h1>
+                <hr>
+            </div>
+            <div class="card">
+                <div class="fakeimg"><img src="https://images2.alphacoders.com/549/thumb-1920-549920.jpg" alt="imagem-da-galaxia"></div>
+                <h2>Galáxia</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in..</p>
+                <a href="#" class="button-learn-more">SAIBA MAIS</a>
+            </div>
+            <div class="card">
+                <div class="fakeimg"><img src="https://th.bing.com/th/id/R.04658acef998484691ca09e340b8db45?rik=kRzvQ6dm92Ot%2bQ&riu=http%3a%2f%2fnoticiasncc.com%2fwp-content%2fuploads%2f2018%2f07%2fvia-lactea.jpg&ehk=ZQTP5s9Opr4P0fpRUKiLF5%2fPot47c48lKA%2bZ9gAp0VA%3d&risl=&pid=ImgRaw&r=0" alt="imagem-via-láctea"></div>
+                <h2>Via Láctea</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in..</p>
+                <a href="#" class="button-learn-more">SAIBA MAIS</a>
+            </div>
+            <div class="elementor-background-saiba-mais-overlay">
+                <div class="container-saiba-mais">
+                    <div class="card-saiba-mais">
+                        <h1>CONHEÇA O ESPAÇO</h1>
+                        <hr>
+                        <p>A agencia de viagem interestelar é especialista no assunto</p>
+                        <a href="#" class="button-learn-more">SAIBA MAIS</a>
+                    </div>
+                    <div class="card-saiba-mais"></div>
+                </div>
+            </div>
+            <div style="width: 100%; height: 100%;">
+                <div class="card-pagamento">
+                    <div class="content-card-pagamento">
+                        <h2>EM ATÉ 12X</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus.</p>
+                        <a href="#" class="button-learn-more">SAIBA MAIS</a>
+                    </div>
+                    <div class="card-double-img">
+                        <img src="https://brasiltravelnews.com.br/wp-content/uploads/2021/06/image-7.jpg" alt="imagem-da-base-espacial">
+                        <img src="https://techbreak.ig.com.br/wp-content/uploads/2021/06/CapsuleFloridaAbove_110521-e1624478218269.jpg" alt="imagem-da-base-espacial-visa-de-cima">
+                    </div>
+                    <div class="card-single-img">
+                        <img src="https://th.bing.com/th/id/OIP.PdJzFrCJ_kCqBWPKgkgpUgHaNB?pid=ImgDet&rs=1" alt="imagem-do-ponto-turístico">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<!-- Estrutura do Rodapé-->
+    <footer>
+        <div class="elementor-background-footer-overlay"></div>
+        <div class="footer-container">
+            <div class="footer-content-sobre">
+                <h2>Sobre nos</h2>
+                <hr>
+                <p class="short-text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in. Nulla volutpat tortor sit amet aliquet congue. Quisque congue porta ullamcorper. Cras lacus turpis, mollis et sodales vestibulum, porta dictum sapien. Cras imperdiet mauris est, vitae blandit lorem maximus non. Phasellus tellus massa, tristique ... <a class="read-more">ler mais</a></p>
+                <p class="full-text" style="display: none" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in. Nulla volutpat tortor sit amet aliquet congue. Quisque congue porta ullamcorper. Cras lacus turpis, mollis et sodales vestibulum, porta dictum sapien. Cras imperdiet mauris est, vitae blandit lorem maximus non. Phasellus tellus massa, tristique malesuada pellentesque nec, ornare a velit. Pellentesque consequat sem nec lorem pharetra, nec tincidunt eros ultrices. Phasellus eget sodales leo. Aenean luctus turpis semper rutrum tincidunt. Nullam feugiat nec risus nec pretium. Mauris porttitor libero quis ultricies pharetra. Nulla faucibus, magna sit amet commodo efficitur, felis mauris elementum tellus, sit amet pellentesque erat augue eget purus. In hendrerit, erat ornare suscipit posuere, odio enim aliquam diam, sed condimentum libero velit vel lectus. Pellentesque hendrerit sit amet nisl vitae pharetra. Sed in orci pharetra, feugiat libero et, tristique sapien. Phasellus iaculis libero eget ligula congue feugiat. Suspendisse vel tincidunt eros. Suspendisse eros enim, pulvinar vel lectus sed, tincidunt iaculis felis. Fusce ex urna, sodales eget vulputate quis, tempus non eros. Integer vel faucibus turpis. Vivamus vel tristique diam. <a class="read-less">ler menos</a></p>
+                <!-- <?php foreach ($feed['posts'] as $data) { ?>
+                    <div class="box-body">
+                        <div class="feed-item-body mt-10 m-width-20 post-body">
+                                <?php echo nl2br(mb_strimwidth($data->post['body'], 0, 1000, ' ...')); ?>
+                                <button class="ler-mais">Ler mais</button>
+                        </div>
+            
+                        <div class="feed-item-body mt-10 m-width-20 post-body-2">
+                                <?php echo nl2br($data->post['body']); ?>
+                                <button class="ler-menos">Ler menos</button>
+                        </div>
+                    </div>
+                <?php } ?> -->
+            </div>
+            <div class="footer-content-links">
+                <h2>Outros links</h2>
+                <hr>
+                <div class="content-group-links">
+                    <a href="#"><p>Sobre</p></a>
+                    <a href="#"><p>FAQ</p></a>
+                    <a href="#"><p>Help</p></a>
+                    <a href="#"><p>Contato</p></a>
+                </div>
+            </div>
+            <div class="footer-content-contato">
+                <h2>Contato-nos</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="copyright">
+            <hr>
+            <p>© Copyright 2022. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.footer-container').forEach(function (el) {
+   
+            var fullText = el.querySelector('.full-text');
+            var shortText =  el.querySelector('.short-text');
+            
+            if (! shortText) return;
+            
+            el.querySelector('.read-more').addEventListener('click', function () {
+                fullText.style.display = '';
+                shortText.style.display = 'none';
+            })
+            
+            el.querySelector('.read-less').addEventListener('click', function () {
+                fullText.style.display = 'none';
+                shortText.style.display = '';
+            })
+        })
+        // //Código do botão leia mais
+        // document.querySelectorAll('.ler-mais').forEach(function (el) {
+        
+        //     el.addEventListener('click', function () {
+        //         let divBoxBody = el.closest('.box-body'); 
+        //         let divPostBody = divBoxBody.querySelector('.post-body').style.display = "none";   
+        //         let divPostBody2 = divBoxBody.querySelector('.post-body-2').style.display = "block"; 
+        //     })   
+        
+        // })
+
+        // //Código do botão leia menos
+        // document.querySelectorAll('.ler-menos').forEach(function (el) {
+        
+        //     el.addEventListener('click', function () {
+        //         let divBoxBody = el.closest('.box-body'); 
+        //         let divPostBody = divBoxBody.querySelector('.post-body').style.display = "block";   
+        //         let divPostBody2 = divBoxBody.querySelector('.post-body-2').style.display = "none"; 
+        //     })   
+        
+        // })
+    </script>
+</body>
+</html>
+
