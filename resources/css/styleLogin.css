@@ -253,7 +253,7 @@ footer h2{
 }
 
 footer .footer-content-sobre{
-    width: 60%;
+    width: 50%;
 }
 footer .footer-content-sobre p{
     font-size: 18px;
@@ -282,15 +282,32 @@ footer .content-group-links a p{
     margin-top: 5px;
 }
 
+footer .footer-content-contato{
+    width: 28%;
+}
+footer .footer-content-contato p{
+    width: 100%;
+}
+footer .content-group-contato{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
 @media screen and (max-width: 1536px) {
     footer .footer-content-sobre{
-        width: 60%;
+        width: 50%;
     }
     footer div{
         margin-right: 50px;
     }
     footer div:last-of-type{
         margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1178px) {
+    footer .footer-content-sobre{
+        width: 45%;
     }
 }
 
@@ -308,6 +325,12 @@ footer .content-group-links a p{
     footer .footer-content-sobre{
         width: 100%;
     }
+    footer .footer-content-contato {
+        width: 50%;
+    }
+    footer .footer-container {
+        justify-content: flex-start;
+    }
     footer .content-group-links{
         margin-top: 0;
     }
@@ -316,6 +339,9 @@ footer .content-group-links a p{
 @media screen and (max-width: 400px) {
     .topnav a {
         float: none;
+        width: 100%;
+    }
+    footer .footer-content-contato {
         width: 100%;
     }
 }

@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-field w-33">
                     <label for="cadastro__tell">Telefone</label>
-                    <input id="cadastro__tell" type="tel" minlength="11" maxlength="11" name="telefone" class="form-input" placeholder="Telefone" value="<?php if(isset($arr['registro']['telefone'])) echo $arr['registro']['telefone'] ?>" required>
+                    <input id="cadastro__tell" onClick="maskPhone()" type="tel" minlength="14" maxlength="15" name="telefone" class="form-input" placeholder="Telefone" value="<?php if(isset($arr['registro']['telefone'])) echo $arr['registro']['telefone'] ?>" required>
                 </div>
                 <div class="form-field w-33" style="height: 61px;">
                     <label style="padding: 0;">Gênero</label>
@@ -73,7 +73,3 @@
         </div>
     </div>
 </main>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-<script>$("#cadastro__tell").mask("(99) 9 9999-9999");</script>
