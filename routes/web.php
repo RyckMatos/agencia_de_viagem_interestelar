@@ -21,6 +21,9 @@
             
             Route::get('cadastrar','CadastroController@index');
             Route::post('cadastrar/usuario','CadastroController@cadastrarUsuario');
+
+            Route::get('suporte','ContatoController@index');
+            Route::get('contato','ContatoController@index');
         }
     }
 ?>

@@ -27,12 +27,17 @@
                     <a href="#"><p>Sobre</p></a>
                     <a href="#"><p>FAQ</p></a>
                     <a href="#"><p>Help</p></a>
-                    <a href="#"><p>Contato</p></a>
+                    <a href="<?php echo SITE.'/suporte' ?>"><p>Contato</p></a>
                 </div>
             </div>
             <div class="footer-content-contato">
                 <h2>Contato-nos</h2>
                 <hr>
+                <div class="content-group-contato">
+                    <p>📞Contato: (11) 4707-7090,</p> 
+                    <p>📧email: agenciaespacial@hotmail.com.br</p>
+                    <p>🗣️Av. da Liberdade, 899 - Liberdade, São Paulo - SP - CEP:01503-001</p>
+                </div>
             </div>
         </div>
         <div class="copyright">
@@ -40,7 +45,31 @@
             <p>© Copyright 2022. Todos os direitos reservados.</p>
         </div>
     </footer>
+    
+    <script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
     <script>
+        function inputHandler(masks, max, event) {
+            var c = event.target;
+            var v = c.value.replace(/\D/g, '');
+            var m = c.value.length > max ? 1 : 0;
+            VMasker(c).unMask();
+            VMasker(c).maskPattern(masks[m]);
+            c.value = VMasker.toPattern(v, masks[m]);
+        }
+        var telMask = ['(99) 9999-9999','(99) 99999-9999'];
+
+		function maskPhone() {
+			let inputPhone = document.getElementById('cadastro__tell');
+			console.log(inputPhone);
+			if(inputPhone.value.length == 14) {
+				VMasker(inputPhone).maskPattern(telMask[0]);
+			}else if(inputPhone.value.length == 15) {
+				VMasker(inputPhone).maskPattern(telMask[1]);
+			}
+			inputPhone.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+			inputPhone.addEventListener('change', inputHandler.bind(undefined, telMask, 14), false);
+		}
+
         document.querySelectorAll('.footer-container').forEach(function (el) {
    
             var fullText = el.querySelector('.full-text');
