@@ -96,6 +96,7 @@ label, p {
 
 
 input[type=submit] {
+    display: block;
     width: 200px;
     margin: 0 auto;
     font-size: 22px;

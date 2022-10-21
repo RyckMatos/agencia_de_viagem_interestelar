@@ -223,7 +223,6 @@ footer .copyright hr{
 
 footer div{
     width: auto;
-    margin-right: 80px;
 }
 footer div:last-of-type{
     margin-right: 0px;
@@ -245,15 +244,14 @@ footer h2{
 
 .footer-container{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 50px 0;
+    display: grid;
+    grid-template-columns: auto 30% 30%;
     margin-bottom: 50px;
-    justify-content: space-between;
 }
 
 footer .footer-content-sobre{
-    width: 50%;
+    width: 100%;
+    padding-right: 60px;
 }
 footer .footer-content-sobre p{
     font-size: 18px;
@@ -267,7 +265,18 @@ footer .footer-content-sobre p .read-less, footer .footer-content-sobre p .read-
 }
 
 footer .content-group-links{
-    display: block;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-right: 20px;
+}
+footer .content-group-links div{
+    display: flex;
+    grid-gap: 8px 0;
+    flex-direction: column;
+}
+footer .content-group-links div:first-of-type{
+    padding-right: 15px;
 }
 footer .content-group-links a{
     text-decoration: none;
@@ -283,7 +292,7 @@ footer .content-group-links a p{
 }
 
 footer .footer-content-contato{
-    width: 28%;
+    width: 100%;
 }
 footer .footer-content-contato p{
     width: 100%;
@@ -292,8 +301,54 @@ footer .content-group-contato{
     display: flex !important;
     flex-wrap: wrap;
 }
+footer .content-group-contato span {
+    font-weight: 500;
+}
+footer .content-group-contato p {
+    margin-bottom: 5px;
+    color: rgb(40, 40, 40);
+    font-size: 18px;
+}
 
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1040px) {
+    .footer-container{
+        display: flex;
+        grid-template-columns: none;
+        flex-wrap: wrap;
+        grid-gap: 50px 0;
+        margin-bottom: 50px;
+        /* justify-content: space-between; */
+    }
+    footer .footer-content-links{
+        width: 50%;
+        padding-right: 20px;
+    }
+    footer .footer-content-contato{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    footer .footer-content-links{
+        width: 100%;
+        padding-right: 0;
+    }
+    footer .footer-content-contato{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width: 1536px) {
     footer .footer-content-sobre{
         width: 50%;
     }
@@ -310,6 +365,7 @@ footer .content-group-contato{
         width: 45%;
     }
 }
+
 
 @media screen and (max-width: 1020px) {
     footer{
@@ -337,6 +393,9 @@ footer .content-group-contato{
 }
   
 @media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
     .topnav a {
         float: none;
         width: 100%;
@@ -344,4 +403,4 @@ footer .content-group-contato{
     footer .footer-content-contato {
         width: 100%;
     }
-}
+} */

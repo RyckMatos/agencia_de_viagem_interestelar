@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Agency</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">     <!-- Estrutura do Estilo-->
-    <link rel="stylesheet" type="text/css" href="../css/home.css">      <!-- Estrutura da Página-->
+    <link rel="stylesheet" type="text/css" href="../css/styleLogin.css">     <!-- Estrutura do Estilo-->
+    <link rel="stylesheet" type="text/css" href="../css/suporte.css">      <!-- Estrutura da Página-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
@@ -29,9 +29,9 @@
     </script>
 </head>
 <body>
-<!-- Estrutra do Cabeçalho-->
+	<!-- Estrutra do Cabeçalho-->
     <header>
-        <div class="elementor-background-header-overlay"></div>
+        <!-- <div class="elementor-background-header-overlay"></div> -->
         <div class="container-header">
             <a href="home.html">
                 <div class="titulo-site">
@@ -54,59 +54,59 @@
                             <a href=""><p>Sign Out <span class="fa fa-sign-out"></span></p></a>
                         </div>
                     </div> -->
-                
-            </nav>
+			</nav>
         </div>
     </header>
-<!-- Estrutura da Home-->
-    <main> 
-        <div class="main-container">
-            <div class="container-title">
-                <h1>ESPAÇO</h1>
-                <hr>
-            </div>
-            <div class="card">
-                <div class="fakeimg"><img src="https://images2.alphacoders.com/549/thumb-1920-549920.jpg" alt="imagem-da-galaxia"></div>
-                <h2>Galáxia</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in..</p>
-                <a href="#" class="button-learn-more">SAIBA MAIS</a>
-            </div>
-            <div class="card">
-                <div class="fakeimg"><img src="https://th.bing.com/th/id/R.04658acef998484691ca09e340b8db45?rik=kRzvQ6dm92Ot%2bQ&riu=http%3a%2f%2fnoticiasncc.com%2fwp-content%2fuploads%2f2018%2f07%2fvia-lactea.jpg&ehk=ZQTP5s9Opr4P0fpRUKiLF5%2fPot47c48lKA%2bZ9gAp0VA%3d&risl=&pid=ImgRaw&r=0" alt="imagem-via-láctea"></div>
-                <h2>Via Láctea</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in..</p>
-                <a href="#" class="button-learn-more">SAIBA MAIS</a>
-            </div>
-            <div class="elementor-background-saiba-mais-overlay">
-                <div class="container-saiba-mais">
-                    <div class="card-saiba-mais">
-                        <h1>CONHEÇA O ESPAÇO</h1>
-                        <hr>
-                        <p>A agencia de viagem interestelar é especialista no assunto</p>
-                        <a href="curiosidade.html" class="button-learn-more">SAIBA MAIS</a>
-                    </div>
-                    <div class="card-saiba-mais"></div>
-                </div>
-            </div>
-            <div style="width: 100%; height: 100%;">
-                <div class="card-pagamento">
-                    <div class="content-card-pagamento">
-                        <h2>EM ATÉ 12X</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus.</p>
-                        <a href="#" class="button-learn-more">SAIBA MAIS</a>
-                    </div>
-                    <div class="card-double-img">
-                        <img src="https://brasiltravelnews.com.br/wp-content/uploads/2021/06/image-7.jpg" alt="imagem-da-base-espacial">
-                        <img src="https://techbreak.ig.com.br/wp-content/uploads/2021/06/CapsuleFloridaAbove_110521-e1624478218269.jpg" alt="imagem-da-base-espacial-visa-de-cima">
-                    </div>
-                    <div class="card-single-img">
-                        <img src="https://th.bing.com/th/id/OIP.PdJzFrCJ_kCqBWPKgkgpUgHaNB?pid=ImgDet&rs=1" alt="imagem-do-ponto-turístico">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- Estrutura do Rodapé-->
+	
+	<!-- <div class="background-contato"></div> -->
+	<main>
+		<div class="background-form">
+			<h2 class="title-main">Suporte 🚀</h2>
+			<form>
+				<div class="form-ocorrencia">
+					<h2>Tipo de ocorrência</h2>
+					<div class="linha-ocorrencia"><input type="checkbox" name="ocorrencia" value="reembolso"><p>Reembolso</p></div>
+					<div class="linha-ocorrencia"><input type="checkbox" name="ocorrencia" value="cancelamento"><p>Cancelamento</p></div>
+					<div class="linha-ocorrencia"><input type="checkbox" name="ocorrencia" value="pagamento"><p>Pagamento</p></div>
+					<div class="linha-ocorrencia"><input type="checkbox" name="ocorrencia" value="sugestao"><p>Sugestões/Melhorias</p></div>
+					<div class="linha-ocorrencia"><input type="checkbox" name="ocorrencia" value="outros"><p>Outros</p></div>
+				</div>
+
+				<div class="form-formulario">
+					<h2>Preencha o Formulário abaixo ⬇️ </h2>
+					<div class="w100 linha-form">
+						<div class="">
+							<label for="nome">Nome</label>
+							<input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+						</div>
+						<!-- <div class="linha-form">
+							<label  for="sobre">Sobrenome: </label>
+							<input type="text" id="sobre" name="sobre" size="35" maxlength="20" value="" name="" placeholder="Digite seu sobrenome ">
+						</div> -->
+						<div class="">
+							<label for="fone">Telefone</label>
+							<input type="tel" onClick="maskPhone()" id="suporte_tel" name="telefone" minlength="14" maxlength="15" placeholder="(xx) x-xxxx-xxxx">
+						</div>
+					</div>
+					<div class="linha-form">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+					</div>
+					<div class="linha-form">
+						<label for="assunto">Assunto</label>
+						<input type="text" id="assunto" name="assunto" placeholder="Digite o assunto que sera abordado aqui...">
+					</div>
+					<div class="linha-form textarea">
+						<label for="mensagem">Digite a mensagem</label>
+						<textarea id="mensagem" name="mensagem" rows="10" cols="40" placeholder="Digite sua mensagem aqui..."></textarea>
+					</div>
+				</div>
+
+				<input type="submit" id="enviar" value="Enviar" size="25" maxlength="25">
+			</form>
+		</div>
+	</main>
+	<!-- Estrutura do Rodapé-->
     <footer>
         <div class="elementor-background-footer-overlay"></div>
         <div class="footer-container">
@@ -150,25 +150,48 @@
             <p>© Copyright 2022. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script>
-        document.querySelectorAll('.footer-container').forEach(function (el) {
-   
-            var fullText = el.querySelector('.full-text');
-            var shortText =  el.querySelector('.short-text');
-            
-            if (! shortText) return;
-            
-            el.querySelector('.read-more').addEventListener('click', function () {
-                fullText.style.display = '';
-                shortText.style.display = 'none';
-            })
-            
-            el.querySelector('.read-less').addEventListener('click', function () {
-                fullText.style.display = 'none';
-                shortText.style.display = '';
-            })
-        })
-    </script>
+
+	<script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+	<script>
+		function inputHandler(masks, max, event) {
+            var c = event.target;
+            var v = c.value.replace(/\D/g, '');
+            var m = c.value.length > max ? 1 : 0;
+            VMasker(c).unMask();
+            VMasker(c).maskPattern(masks[m]);
+            c.value = VMasker.toPattern(v, masks[m]);
+        }
+        var telMask = ['(99) 9999-9999','(99) 99999-9999'];
+
+		function maskPhone() {
+			let inputPhone = document.getElementById('suporte_tel');
+			console.log(inputPhone);
+			if(inputPhone.value.length == 14) {
+				VMasker(inputPhone).maskPattern(telMask[0]);
+			}else if(inputPhone.value.length == 15) {
+				VMasker(inputPhone).maskPattern(telMask[1]);
+			}
+			inputPhone.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+			inputPhone.addEventListener('change', inputHandler.bind(undefined, telMask, 14), false);
+		}
+
+		document.querySelectorAll('.footer-container').forEach(function (el) {
+
+			var fullText = el.querySelector('.full-text');
+			var shortText =  el.querySelector('.short-text');
+			
+			if (! shortText) return;
+			
+			el.querySelector('.read-more').addEventListener('click', function () {
+				fullText.style.display = '';
+				shortText.style.display = 'none';
+			})
+			
+			el.querySelector('.read-less').addEventListener('click', function () {
+				fullText.style.display = 'none';
+				shortText.style.display = '';
+			})
+		})
+	</script>
 </body>
 </html>
-

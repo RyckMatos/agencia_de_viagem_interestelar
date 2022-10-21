@@ -211,45 +211,6 @@ main form {
 	z-index: 2;
 }
 
-/* .overlay-container {
-	position: absolute;
-	top: 0;
-	left: 45%;
-	width: 45%;
-	height: 100%;
-}
-
-.overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 0;
-	color: #FFFFFF;
-	position: relative;
-	left: -100%;
-	height: 100%;
-	width: 200%;
-}
-
-.overlay-panel {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-	height: 100%;
-	width: 50%;
-}
-
-.overlay-left {
-	left: 0;
-} */
-
 @media screen and (max-width: 900px) {
     main{
         margin: 0 2%;

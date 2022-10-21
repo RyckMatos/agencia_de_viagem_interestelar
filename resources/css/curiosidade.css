@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+main {
+    width: 80%;
+    min-height: 720px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    color:#505050;
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    text-align: center;
+}
+
+article h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: rgb(59, 59, 59);
+}
+
+section { 
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+section h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgb(59, 59, 59);
+}
+
+section p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    word-spacing: 3px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+}
+
+section a {
+    color: rgb(44, 101, 255);
+}
+section a:hover {
+    color: rgb(16, 60, 255);
+}
+section a:active {
+    color: rgb(7, 40, 230);
+}
+
+.right-image {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.right-image div {
+    width: 100%;
+    padding-right: 30px;
+}
+.right-image div:last-of-type {
+    padding-right: 0;
+}
+.right-image p {
+    width: 100%;
+    max-width: 900px;
+}
+.right-image img {
+    width: 100%;
+    max-width: 900px;
+    height: 530px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 1440px) {
+    .right-image {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .right-image div:first-of-type {
+        display: flex;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        padding-right: 0;
+    }
+    .right-image div:first-of-type p {
+        width: 30%;
+        padding-right: 30px;
+    }
+    .right-image div:last-of-type {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .right-image div:last-of-type p {
+        width: 30%;
+        padding-left: 30px;
+    }
+    .right-image h3 {
+        width: 100%;
+    }
+    .right-image img {
+        height: auto;
+        width: 70%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .right-image div {
+        flex-direction: column;
+    }
+    .right-image div:first-of-type p {
+        width: 100%;
+        padding-right: 0;
+    }
+    .right-image div:last-of-type p {
+        width: 100%;
+        padding-left: 0;
+    }
+    .right-image img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 720px) {
+    main {
+        width: 90%;
+    }
+}

@@ -26,7 +26,7 @@
                     <h1>CONHEÇA O ESPAÇO</h1>
                     <hr>
                     <p>A agencia de viagem interestelar é especialista no assunto</p>
-                    <a href="#" class="button-learn-more">SAIBA MAIS</a>
+                    <a href="<?php echo SITE.'/curiosidade' ?>" class="button-learn-more">SAIBA MAIS</a>
                 </div>
                 <div class="card-saiba-mais"></div>
             </div>

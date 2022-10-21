@@ -1,7 +1,7 @@
 <?php
 	namespace App\Controllers;
 
-	class ContatoController extends Controller
+	class SuporteController extends Controller
 	{
 		public function __construct(){
 			$this->view = new \Resources\Views\MainView();
@@ -12,7 +12,7 @@
         }
 
         public function index() {
-            $this->view->render('contato', array('link_css_base' => 'styleLogin.css', 'link_css' => 'contato.css'));
+            $this->view->render('suporte', array('link_css_base' => 'styleLogin.css', 'link_css' => 'suporte.css'));
         }
 
 		// public function executar(){
