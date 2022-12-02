@@ -27,6 +27,9 @@
 
             Route::get('sobre-nos','SobreController@index');
             Route::get('curiosidade','CuriosidadeController@index');
+
+            Route::get('admin','AdminController@index');
+           
         }
     }
 ?>
