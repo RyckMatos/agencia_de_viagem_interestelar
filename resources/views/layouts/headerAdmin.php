@@ -42,9 +42,9 @@
                 </div>
             </a>
             <div class="topnav">
-                <a href="#">Clientes</a>
                 <a href="#">Passagens</a>
-                <a href="#">Viagens</a>
+                <a href="#">Hospedagens</a>
+                <a href="#">Pacotes</a>
                 <a href="#">Relatórios</a>
                 <a href="#">Sair</a>
                 

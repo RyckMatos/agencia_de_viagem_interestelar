@@ -9,6 +9,7 @@
     } else {
         $sql = "CREATE TABLE users (
             id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            `admin` INT NULL,
             `status` INT NOT NULL COMMENT '0 = desativado, 1 = ativado, 2 = admin',
             token VARCHAR(255) NOT NULL UNIQUE,
             nome VARCHAR(255) NOT NULL,

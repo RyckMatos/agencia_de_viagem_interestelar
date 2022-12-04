@@ -29,7 +29,8 @@
             Route::get('curiosidade','CuriosidadeController@index');
 
             Route::get('admin','AdminController@index');
-           
+
+            Route::get('painel','PainelUsuarioController@index');
         }
     }
 ?>
