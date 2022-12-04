@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    /* background: #f1f1f1; */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* background-color: #f1f1f1; */
+}
+
+/* ============================== MENU PERFIL ============================== */
+
+.menu{
+    width:260px;
+    /* margin:60px auto 0; */
+    cursor:pointer;
+}
+
+.title{
+    width:260px;
+    box-sizing:border-box;
+    /* background:#fff; */
+    /* padding:14px; */
+    /* border-radius:4px; */
+    position:relative;
+    box-shadow:0 0 40px -10px #000;
+    color:#505050;
+    /* color:white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu span{
+    float:right;
+    font-size:18px!important;
+}
+
+.dropdown{
+    width:260px;
+    background:#fff;
+    border-radius:4px;
+    box-shadow:0 0 40px -10px #000;
+    color:#505050;
+    margin-top:24px;
+    max-height:0;
+    overflow:hidden;
+    transition:all .5s;
+    position: absolute;
+}
+
+.down{
+    max-height:150px;
+}
+
+.arrow{
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom:10px solid #fff;
+    position:absolute;
+    right:20px;
+    bottom:-24px;
+    display:none;
+}
+
+.arrow.gone{
+    display:block;
+}
+
+.menu p{
+    padding:15px 14px;
+    margin:0;
+    transition:all .1s;
+}
+
+.menu p:hover{
+    background:coral;
+    --webkit-transform:scale(1.05);
+    color:rgba(255,255,255,0.8);
+    box-shadow:0 0 30px -10px #000;
+}
+
+/* ============================== HEADER ============================== */
+
+header{
+    width: 100%;
+    height: 200px;
+    color: white;
+    /* min-height: 100px; */
+    /* padding: 30px;
+    text-align: center; */
+    /* background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0; */
+}
+/* .elementor-background-header-overlay{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url('https://wallpapercave.com/dwp1x/wp11526386.jpg');
+    background-position: center right;
+    opacity: 0.88;
+    filter: brightness( 80% ) contrast( 115% ) saturate( 100% ) blur( 0.3px ) hue-rotate( 0deg );
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+/* .main-container {
+    z-index: -1;
+    width: 100%;
+    height: 900px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url('https://wallpapercave.com/dwp1x/wp11526386.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.container-header{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+.container-header a {
+    text-decoration: none;
+    color: black;
+}
+header h1{
+    font-size: 50px;
+}
+
+.topnav {
+    /* overflow: hidden; */
+    /* background-color: #333; */
+    /* background-color: rgb(93, 93, 93); */
+    /* margin-bottom: 50px; */
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 24px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+}
+
+.topnav a:hover {
+    color: rgb(22, 131, 255);
+}
+
+.topnav .link-login {
+    border: 1px solid black;
+    border-width: 1px 3px 3px 1px;
+    border-radius: 50px;
+    margin-right: 0;
+}
+
+.topnav .link-login:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.perfil-login {
+    height: 35px;
+    width: 35px;
+    border-radius: 15%;
+    padding: 2px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* ============================== FOOTER ============================== */
+
+footer{
+    width: 100%;
+    min-height: 180px;
+    /* background-color: black; */
+    margin-top: 50px;
+    /* color: rgb(200, 200, 200); */
+    color: black;
+    padding: 5%;
+    padding-bottom: 40px;
+    position: relative;
+    /* background-image: url('https://acegif.com/wp-content/gif/outerspace-58.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -80px; */
+}
+/* .elementor-background-footer-overlay{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url('https://acegif.com/wp-content/gif/outerspace-58.gif');
+    background-position: center right;
+    opacity: 0.88;
+    filter: brightness( 25% ) contrast( 115% ) saturate( 100% ) blur( 0.3px ) hue-rotate( 0deg );
+} */
+footer .copyright{
+    margin-right: 0;
+}
+footer .copyright p{
+    font-size: 18px;
+    margin-top: 4px;
+    text-align: center;
+}
+footer .copyright hr{
+    border: solid 1px rgb(140, 140, 140);
+    opacity: 0.6;
+    border-radius: 50px;
+    width: 100%;
+}
+
+footer div{
+    width: auto;
+}
+footer div:last-of-type{
+    margin-right: 0px;
+}
+
+footer div hr{
+    width: 50px;
+    background-color: rgb(140, 140, 140);
+    border: solid 2px rgb(140, 140, 140);
+    border-radius: 50px;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+footer h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 30% 30%;
+    margin-bottom: 50px;
+}
+
+footer .footer-content-sobre{
+    width: 100%;
+    padding-right: 60px;
+}
+footer .footer-content-sobre p{
+    font-size: 18px;
+    text-indent: 30px;
+    text-align: justify;
+}
+footer .footer-content-sobre p .read-less, footer .footer-content-sobre p .read-more{
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+footer .content-group-links{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-right: 20px;
+}
+footer .content-group-links div{
+    display: flex;
+    grid-gap: 8px 0;
+    flex-direction: column;
+}
+footer .content-group-links div:first-of-type{
+    padding-right: 15px;
+}
+footer .content-group-links a{
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+    font-size: 18px;
+}
+footer .content-group-links a:hover{
+    cursor: pointer;
+    color: rgb(141, 199, 250);
+}
+footer .content-group-links a p{
+    margin-top: 5px;
+}
+
+footer .footer-content-contato{
+    width: 100%;
+}
+footer .footer-content-contato p{
+    width: 100%;
+}
+footer .content-group-contato{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+footer .content-group-contato span {
+    font-weight: 500;
+}
+footer .content-group-contato p {
+    margin-bottom: 5px;
+    color: rgb(40, 40, 40);
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1040px) {
+    .footer-container{
+        display: flex;
+        grid-template-columns: none;
+        flex-wrap: wrap;
+        grid-gap: 50px 0;
+        margin-bottom: 50px;
+        /* justify-content: space-between; */
+    }
+    footer .footer-content-links{
+        width: 50%;
+        padding-right: 20px;
+    }
+    footer .footer-content-contato{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    footer .footer-content-links{
+        width: 100%;
+        padding-right: 0;
+    }
+    footer .footer-content-contato{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width: 1536px) {
+    footer .footer-content-sobre{
+        width: 50%;
+    }
+    footer div{
+        margin-right: 50px;
+    }
+    footer div:last-of-type{
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1178px) {
+    footer .footer-content-sobre{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    footer{
+        display: block;
+        padding: 5% 3%;
+    }
+    footer div{
+        margin-right: 50px;
+    }
+    footer div:last-of-type, footer div:first-of-type{
+        margin-right: 0px;
+    }
+    footer .footer-content-sobre{
+        width: 100%;
+    }
+    footer .footer-content-contato {
+        width: 50%;
+    }
+    footer .footer-container {
+        justify-content: flex-start;
+    }
+    footer .content-group-links{
+        margin-top: 0;
+    }
+}
+  
+@media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+    footer .footer-content-contato {
+        width: 100%;
+    }
+} */

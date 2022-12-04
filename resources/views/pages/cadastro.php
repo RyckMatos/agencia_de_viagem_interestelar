@@ -13,7 +13,10 @@
         <div class="form-container cadastro-container">
             <form action="<?php echo SITE.'/cadastrar/usuario' ?>" method="POST" class="form cadastro">
                 <h1 class="w-100">Cadastro</h1>
-                <?php if(isset($arr['msg_cadastro'])) echo '<p style="width: 100%; text-align: center; font-weight: 500; background-color: #ff0000d9; padding: 10px;">'.$arr['msg_cadastro'].' </p>' ?>
+                <?php if(isset($arr['msg_cadastro'])) echo '
+                    <div class="alert alert-danger" role="alert">
+                        '.$arr['msg_cadastro'].'
+                    </div>' ?>
                 <div class="form-field w-50">
                     <label for="cadastro__nome">Nome</label>
                     <input id="cadastro__nome" type="text" name="nome" class="form-input" placeholder="Nome" value="<?php if(isset($arr['registro']['nome'])) echo $arr['registro']['nome'] ?>" required>
@@ -28,7 +31,7 @@
                 </div>
                 <div class="form-field w-33">
                     <label for="cadastro__tell">Telefone</label>
-                    <input id="cadastro__tell" type="tel" minlength="11" maxlength="11" name="telefone" class="form-input" placeholder="Telefone" value="<?php if(isset($arr['registro']['telefone'])) echo $arr['registro']['telefone'] ?>" required>
+                    <input id="cadastro__tell" onClick="maskPhone()" type="tel" minlength="14" maxlength="15" name="telefone" class="form-input" placeholder="Telefone" value="<?php if(isset($arr['registro']['telefone'])) echo $arr['registro']['telefone'] ?>" required>
                 </div>
                 <div class="form-field w-33" style="height: 61px;">
                     <label style="padding: 0;">Gênero</label>
@@ -73,7 +76,3 @@
         </div>
     </div>
 </main>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-<script>$("#cadastro__tell").mask("(99) 9 9999-9999");</script>

@@ -24,8 +24,10 @@
 
                 $info = LoginModel::verificaEmail($email);
 
-                if(!isset($_SESSION['tentativa']))
+                if(!isset($_SESSION['tentativa'])) {
                     $_SESSION['tentativa'] = 1;
+                    $_SESSION['startLogin'] = time();
+                }
 
                 if(isset($info) && isset($info['senha']) && md5($senha) == $info['senha'] && $_SESSION['tentativa'] < 3) {
                     $_SESSION['token'] = $info['token'];

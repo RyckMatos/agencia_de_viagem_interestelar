@@ -7,9 +7,13 @@
 			$this->view = new \Resources\Views\MainView();
 		}
 		
-		public function executar(){
-			$this->view->render('sobre', array('link_css_base' => 'style.css', 'link_css' => 'sobre.css'));
-		}
+		public function executar($arg) {
+            self::$arg();
+        }
+
+		public function index() {
+            $this->view->render('sobre_nos', array('link_css_base' => 'styleLogin.css', 'link_css' => 'sobre_nos.css'));
+        }
 	}
 
 ?>

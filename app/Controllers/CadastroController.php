@@ -14,7 +14,7 @@
         }
 
         public function index() {
-            $this->view->render('cadastro', array('link_css_base' => 'styleLogin.css', 'link_css' => 'cadastro.css'));
+            $this->view->render('cadastro', array('link_css_base' => 'styleCadastro.css', 'link_css' => 'cadastro.css'));
         }
 
         public function cadastrarUsuario() {
@@ -53,7 +53,8 @@
                     $token = md5(uniqid());
                     $_SESSION['token'] = $token;
                     $queryInsert = $sql->prepare("INSERT INTO `users` VALUES (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-                    $queryInsert->execute(array(1, $token, $registro['nome'], $registro['sobrenome'], $registro['email'], $registro['telefone'], $registro['nascimento'], $registro['genero'], $registro['endereco'], $registro['cidade'], $registro['estado'], $registro['pais'], $senha, $created_at, $updated_at));
+                    $queryInsert->execute(array(1, $token, $registro['nome'], $registro['sobrenome'], $registro['email'], $registro['telefone'], 
+                    $registro['nascimento'], $registro['genero'], $registro['endereco'], $registro['cidade'], $registro['estado'], $registro['pais'], $senha, $created_at, $updated_at));
 
                     header('Location: /agencia_de_viagem_interestelar/');
                     die();
