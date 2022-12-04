@@ -83,7 +83,7 @@ label, p {
 .linha-form div:first-of-type {
     margin-right: 15px;
 }
-.form-formulario .textarea {
+#manifestacao {
     display: block;
 }
 .textarea textarea {
@@ -96,6 +96,7 @@ label, p {
 
 
 input[type=submit] {
+    display: block;
     width: 200px;
     margin: 0 auto;
     font-size: 22px;

@@ -3,12 +3,14 @@
         if (!isset($_SESSION['time']))
             $_SESSION['time'] = time();
             
-        if (isset($_SESSION['time']) && (time() - $_SESSION['time'] > 3)) {
+        if (isset($_SESSION['time']) && (time() - $_SESSION['time'] > 300)) {
             session_unset(); 
             session_destroy(); 
 
             $_SESSION['time'] = time();
         }
+    }elseif (isset($_SESSION['startLogin']) && (time() - $_SESSION['startLogin'] > 1800)) {
+        unset($_SESSION['startLogin']);
     }
     
 ?>
@@ -24,7 +26,10 @@
         <div class="form-container log-in-container">
             <form action="<?php echo SITE.'/login/logar' ?>" method="POST" class="form login">
                 <h1>Login</h1>
-                <?php if(isset($_SESSION['msg_login'])) echo '<p style="width: 100%; text-align: center; font-weight: 500; background-color: #ff0000d9; padding: 10px;">'.$_SESSION['msg_login'].' </p>' ?>
+                <?php if(isset($_SESSION['msg_login'])) echo '
+                    <div class="alert alert-danger" role="alert">
+                        '.$_SESSION['msg_login'].'
+                    </div>' ?>
                 <div class="form-field">
                     <label for="login__email"><span class="material-symbols-outlined">person</span></label>
                     <input id="login__email" type="email" name="email" class="form-input" placeholder="Email" value="<?php if(isset($arr['email'])) echo $arr['email'] ?>" required>

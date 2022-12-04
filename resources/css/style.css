@@ -39,7 +39,7 @@ body{
     box-sizing:border-box;
     /* background:#fff; */
     /* padding:14px; */
-    /* border-radius:4px; */
+    border-radius:4px;
     position:relative;
     box-shadow:0 0 40px -10px #000;
     /* color:#505050; */
@@ -60,15 +60,15 @@ body{
     border-radius:4px;
     box-shadow:0 0 40px -10px #000;
     color:#505050;
-    margin-top:24px;
+    /* margin-top:24px; adicionado no js do header*/
     max-height:0;
     overflow:hidden;
     transition:all .5s;
-    position: absolute;
+    position: absolute !important;
 }
 
 .down{
-    max-height:150px;
+    max-height:171px;
 }
 
 .arrow{
@@ -154,7 +154,7 @@ header h1{
     flex-wrap: wrap;
 }
   
-.topnav a {
+.link-nav {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -165,7 +165,7 @@ header h1{
     transition: 150ms ease-in-out;
 }
 
-.topnav a:hover {
+.link-nav:hover {
     color: rgb(22, 131, 255);
 }
 
@@ -234,7 +234,6 @@ footer .copyright hr{
 
 footer div{
     width: auto;
-    margin-right: 80px;
 }
 footer div:last-of-type{
     margin-right: 0px;
@@ -256,14 +255,14 @@ footer h2{
 
 .footer-container{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 50px 0;
+    display: grid;
+    grid-template-columns: auto 30% 30%;
     margin-bottom: 50px;
 }
 
 footer .footer-content-sobre{
-    width: 50%;
+    width: 100%;
+    padding-right: 60px;
 }
 footer .footer-content-sobre p{
     font-size: 18px;
@@ -279,11 +278,22 @@ footer .footer-content-sobre p .read-less, footer .footer-content-sobre p .read-
 }
 
 footer .content-group-links{
-    display: block;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-right: 20px;
+}
+footer .content-group-links div{
+    display: flex;
+    grid-gap: 8px 0;
+    flex-direction: column;
+}
+footer .content-group-links div:first-of-type{
+    padding-right: 15px;
 }
 footer .content-group-links a{
     text-decoration: none;
-    color: rgb(200, 200, 200);
+    color: white;
     font-size: 18px;
 }
 footer .content-group-links a:hover{
@@ -295,7 +305,7 @@ footer .content-group-links a p{
 }
 
 footer .footer-content-contato{
-    width: 28%;
+    width: 100%;
 }
 footer .footer-content-contato p{
     width: 100%;
@@ -304,8 +314,54 @@ footer .content-group-contato{
     display: flex !important;
     flex-wrap: wrap;
 }
+footer .content-group-contato span {
+    font-weight: 500;
+}
+footer .content-group-contato p {
+    margin-bottom: 5px;
+    color: white;
+    font-size: 18px;
+}
 
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1040px) {
+    .footer-container{
+        display: flex;
+        grid-template-columns: none;
+        flex-wrap: wrap;
+        grid-gap: 50px 0;
+        margin-bottom: 50px;
+        /* justify-content: space-between; */
+    }
+    footer .footer-content-links{
+        width: 50%;
+        padding-right: 20px;
+    }
+    footer .footer-content-contato{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    footer .footer-content-links{
+        width: 100%;
+        padding-right: 0;
+    }
+    footer .footer-content-contato{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width: 1536px) {
     footer .footer-content-sobre{
         width: 50%;
     }
@@ -349,6 +405,9 @@ footer .content-group-contato{
 }
   
 @media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
     .topnav a {
         float: none;
         width: 100%;
@@ -356,4 +415,4 @@ footer .content-group-contato{
     footer .footer-content-contato {
         width: 100%;
     }
-}
+} */

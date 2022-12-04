@@ -1,7 +1,7 @@
 <?php
 	namespace App\Controllers;
 
-	class SobreController extends Controller
+	class PainelUsuarioController extends Controller
 	{
 		public function __construct(){
 			$this->view = new \Resources\Views\MainView();
@@ -12,7 +12,7 @@
         }
 
 		public function index() {
-            $this->view->render('sobre_nos', array('link_css_base' => 'styleLogin.css', 'link_css' => 'sobre_nos.css'));
+            $this->view->render('painelUsuario', array('link_css_base' => 'styleLogin.css', 'link_css' => 'painelUsuario.css'));
         }
 	}
 

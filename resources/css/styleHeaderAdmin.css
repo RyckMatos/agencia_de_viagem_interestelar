@@ -1,4 +1,3 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat";
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +11,8 @@ body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background-color: #f1f1f1;
+    position: relative;
+    /* background-color: #f1f1f1; */
 }
 
 /* ============================== MENU PERFIL ============================== */
@@ -23,17 +23,6 @@ body{
     cursor:pointer;
 }
 
-.menu a {
-    float: none !important;
-    display: unset !important;
-    color: #505050 !important;
-    text-align: unset !important;
-    padding: 0 !important;
-    margin-right: 0 !important;
-    text-decoration: none !important;
-    transition: none !important;
-}
-
 .title{
     width:260px;
     box-sizing:border-box;
@@ -42,8 +31,8 @@ body{
     /* border-radius:4px; */
     position:relative;
     box-shadow:0 0 40px -10px #000;
-    /* color:#505050; */
-    color:white;
+    color:#505050;
+    /* color:white; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -102,8 +91,10 @@ body{
 
 header{
     width: 100%;
-    height: 100vh;
-    color: white;
+    height: 200px;
+    color: black;
+    /* background: linear-gradient(90.42deg, #090F4A 2.4%, rgba(10, 77, 73, 0.960528) 47.39%, rgba(24, 33, 114, 0.85) 99.61%);
+    border: 1px solid #000000; */
     /* min-height: 100px; */
     /* padding: 30px;
     text-align: center; */
@@ -113,8 +104,12 @@ header{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0; */
+   
 }
-.elementor-background-header-overlay{
+.subtitle{
+    color: black;
+}
+/* .elementor-background-header-overlay{
     z-index: -1;
     height: 100%;
     width: 100%;
@@ -127,7 +122,7 @@ header{
     filter: brightness( 80% ) contrast( 115% ) saturate( 100% ) blur( 0.3px ) hue-rotate( 0deg );
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 .container-header{
     display: flex;
     justify-content: space-evenly;
@@ -136,7 +131,7 @@ header{
 }
 .container-header a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 header h1{
     font-size: 50px;
@@ -157,7 +152,7 @@ header h1{
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 24px;
     margin-right: 20px;
@@ -166,18 +161,18 @@ header h1{
 }
 
 .topnav a:hover {
-    color: rgb(22, 131, 255);
+    color: rgb(10, 77, 73);
 }
 
 .topnav .link-login {
-    border: 1px solid white;
+    border: 1px solid black;
     border-width: 1px 3px 3px 1px;
     border-radius: 50px;
     margin-right: 0;
 }
 
 .topnav .link-login:hover {
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(240, 240, 240);
 }
 
 .perfil-login {
@@ -193,19 +188,23 @@ header h1{
 
 footer{
     width: 100%;
-    min-height: 180px;
+    /* height: 100%; */
     /* background-color: black; */
-    margin-top: 50px;
+     margin-top: 50px; 
     /* color: rgb(200, 200, 200); */
-    color: white;
+    color: black;
     padding: 5%;
-    position: relative;
+    padding-bottom: 40px;
+    bottom: 0;
+    position: fixed;
+    /* background: linear-gradient(90.42deg, #090F4A 2.4%, rgba(10, 77, 73, 0.960528) 47.39%, rgba(24, 33, 114, 0.85) 99.61%);
+    border: 1px solid #000000; */
     /* background-image: url('https://acegif.com/wp-content/gif/outerspace-58.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 -80px; */
 }
-.elementor-background-footer-overlay{
+/* .elementor-background-footer-overlay{
     z-index: -1;
     height: 100%;
     width: 100%;
@@ -216,7 +215,7 @@ footer{
     background-position: center right;
     opacity: 0.88;
     filter: brightness( 25% ) contrast( 115% ) saturate( 100% ) blur( 0.3px ) hue-rotate( 0deg );
-}
+} */
 footer .copyright{
     margin-right: 0;
 }
@@ -224,9 +223,10 @@ footer .copyright p{
     font-size: 18px;
     margin-top: 4px;
     text-align: center;
+    color: #000;
 }
 footer .copyright hr{
-    border: solid 1px rgb(200, 200, 200);
+    border: solid 1px rgb(140, 140, 140);
     opacity: 0.6;
     border-radius: 50px;
     width: 100%;
@@ -234,7 +234,6 @@ footer .copyright hr{
 
 footer div{
     width: auto;
-    margin-right: 80px;
 }
 footer div:last-of-type{
     margin-right: 0px;
@@ -242,8 +241,8 @@ footer div:last-of-type{
 
 footer div hr{
     width: 50px;
-    background-color: rgb(200,200,200);
-    border: solid 2px rgb(200, 200, 200);
+    background-color: rgb(140, 140, 140);
+    border: solid 2px rgb(140, 140, 140);
     border-radius: 50px;
     margin-top: 2px;
     margin-bottom: 15px;
@@ -256,34 +255,43 @@ footer h2{
 
 .footer-container{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 50px 0;
+    display: grid;
+    grid-template-columns: auto 30% 30%;
     margin-bottom: 50px;
 }
 
 footer .footer-content-sobre{
-    width: 50%;
+    width: 100%;
+    padding-right: 60px;
 }
 footer .footer-content-sobre p{
     font-size: 18px;
     text-indent: 30px;
     text-align: justify;
-    word-spacing: 2px;
-    line-height: 1.6;
-    letter-spacing: 0.01em;
 }
 footer .footer-content-sobre p .read-less, footer .footer-content-sobre p .read-more{
-    color: white;
+    color: black;
+    font-weight: 500;
     cursor: pointer;
 }
 
 footer .content-group-links{
-    display: block;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-right: 20px;
+}
+footer .content-group-links div{
+    display: flex;
+    grid-gap: 8px 0;
+    flex-direction: column;
+}
+footer .content-group-links div:first-of-type{
+    padding-right: 15px;
 }
 footer .content-group-links a{
     text-decoration: none;
-    color: rgb(200, 200, 200);
+    color: rgb(40, 40, 40);
     font-size: 18px;
 }
 footer .content-group-links a:hover{
@@ -295,7 +303,7 @@ footer .content-group-links a p{
 }
 
 footer .footer-content-contato{
-    width: 28%;
+    width: 100%;
 }
 footer .footer-content-contato p{
     width: 100%;
@@ -304,8 +312,54 @@ footer .content-group-contato{
     display: flex !important;
     flex-wrap: wrap;
 }
+footer .content-group-contato span {
+    font-weight: 500;
+}
+footer .content-group-contato p {
+    margin-bottom: 5px;
+    color: rgb(40, 40, 40);
+    font-size: 18px;
+}
 
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1040px) {
+    .footer-container{
+        display: flex;
+        grid-template-columns: none;
+        flex-wrap: wrap;
+        grid-gap: 50px 0;
+        margin-bottom: 50px;
+        /* justify-content: space-between; */
+    }
+    footer .footer-content-links{
+        width: 50%;
+        padding-right: 20px;
+    }
+    footer .footer-content-contato{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    footer .footer-content-links{
+        width: 100%;
+        padding-right: 0;
+    }
+    footer .footer-content-contato{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width: 1536px) {
     footer .footer-content-sobre{
         width: 50%;
     }
@@ -349,6 +403,9 @@ footer .content-group-contato{
 }
   
 @media screen and (max-width: 400px) {
+    header {
+        height: auto;
+    }
     .topnav a {
         float: none;
         width: 100%;
@@ -356,4 +413,4 @@ footer .content-group-contato{
     footer .footer-content-contato {
         width: 100%;
     }
-}
+} */

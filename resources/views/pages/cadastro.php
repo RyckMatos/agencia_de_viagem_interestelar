@@ -13,7 +13,10 @@
         <div class="form-container cadastro-container">
             <form action="<?php echo SITE.'/cadastrar/usuario' ?>" method="POST" class="form cadastro">
                 <h1 class="w-100">Cadastro</h1>
-                <?php if(isset($arr['msg_cadastro'])) echo '<p style="width: 100%; text-align: center; font-weight: 500; background-color: #ff0000d9; padding: 10px;">'.$arr['msg_cadastro'].' </p>' ?>
+                <?php if(isset($arr['msg_cadastro'])) echo '
+                    <div class="alert alert-danger" role="alert">
+                        '.$arr['msg_cadastro'].'
+                    </div>' ?>
                 <div class="form-field w-50">
                     <label for="cadastro__nome">Nome</label>
                     <input id="cadastro__nome" type="text" name="nome" class="form-input" placeholder="Nome" value="<?php if(isset($arr['registro']['nome'])) echo $arr['registro']['nome'] ?>" required>
