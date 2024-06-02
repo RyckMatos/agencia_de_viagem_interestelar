@@ -33,7 +33,7 @@
                     <label for="cadastro__tell">Telefone</label>
                     <input id="cadastro__tell" onClick="maskPhone()" type="tel" minlength="14" maxlength="15" name="telefone" class="form-input" placeholder="Telefone" value="<?php if(isset($arr['registro']['telefone'])) echo $arr['registro']['telefone'] ?>" required>
                 </div>
-                <div class="form-field w-33" style="height: 61px;">
+                <div class="form-field w-33">
                     <label style="padding: 0;">Gênero</label>
                     <div style="display: flex; margin-top: 6px;">
                         <input style="margin-left: -10px;" id="cadastro__genero" type="radio" name="genero" class="form-input" value="masculino" <?php if(isset($arr['registro']['genero'])) if($arr['registro']['genero'] == 'masculino') echo 'checked' ?> required>

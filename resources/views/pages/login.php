@@ -1,5 +1,5 @@
 <?php 
-    if(isset($_SESSION['tentativa']) && $_SESSION['tentativa'] > 3) {
+    if (isset($_SESSION['tentativa']) && $_SESSION['tentativa'] > 3) {
         if (!isset($_SESSION['time']))
             $_SESSION['time'] = time();
             
@@ -9,7 +9,7 @@
 
             $_SESSION['time'] = time();
         }
-    }elseif (isset($_SESSION['startLogin']) && (time() - $_SESSION['startLogin'] > 1800)) {
+    } elseif (isset($_SESSION['startLogin']) && (time() - $_SESSION['startLogin'] > 1800)) {
         unset($_SESSION['startLogin']);
     }
     

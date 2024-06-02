@@ -1,0 +1,81 @@
+/* =============== DALTONISMO =============== */
+
+/* Vermelho Original */
+.original-vermelho {
+    background-color: rgb(180, 0, 0);
+}
+
+/* Vermelho Protanopia */
+.protanopia-vermelho {
+    background-color: rgb(102, 56, 0);
+}
+
+/* Vermelho Deuteranopia */
+.deuteranopia-vermelho {
+    background-color: rgb(112, 78, 0);
+}
+
+/* Vermelho Tritanopia */
+.tritanopia-vermelho {
+    background-color: rgb(180, 90, 125);
+}
+
+/* Azul Original */
+.original-azul {
+    background-color: rgb(74, 164, 254);
+}
+
+/* Azul Protanopia */
+.protanopia-azul {
+    background-color: rgb(112, 135, 254);
+}
+
+/* Azul Deuteranopia */
+.deuteranopia-azul {
+    background-color: rgb(107, 124, 254);
+}
+
+/* Azul Tritanopia */
+.tritanopia-azul {
+    background-color: rgb(74, 119, 128);
+}
+
+/* Rosa Original */
+.original-rosa {
+    background-color: rgb(251, 172, 185);
+}
+
+/* Rosa Protanopia */
+.protanopia-rosa {
+    background-color: rgb(216, 196, 185);
+}
+
+/* Rosa Deuteranopia */
+.deuteranopia-rosa {
+    background-color: rgb(221, 206, 185);
+}
+
+/* Rosa Tritanopia */
+.tritanopia-rosa {
+    background-color: rgb(251, 211, 231);
+}
+
+/* Verde Original */
+.original-verde {
+    background-color: rgb(50, 200, 75);
+}
+
+/* Verde Protanopia */
+.protanopia-verde {
+    background-color: rgb(114, 152, 75);
+}
+
+/* Verde Deuteranopia */
+.deuteranopia-verde {
+    background-color: rgb(106, 134, 75);
+}
+
+/* Verde Tritanopia */
+.tritanopia-verde {
+    background-color: rgb(50, 125, 57);
+}
