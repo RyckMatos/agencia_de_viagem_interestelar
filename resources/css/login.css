@@ -74,6 +74,10 @@ main a {
 	margin-bottom: 10px;
     transition: 150ms ease-in;
 }
+
+/* =============== DALTONISMO main input[type='submit'] =============== */
+
+/* Original */
 main a:focus,
 main a:hover {
     text-decoration: underline;
@@ -93,11 +97,52 @@ main input[type='submit'] {
 	transition: 300ms ease-in-out;
     cursor: pointer;
 }
+
 main input[type='submit']:hover {
     background-color: rgb(251, 172, 185);
 }
+
 main input[type='submit']:active {
     background-color: rgb(250, 155, 171);
+}
+
+/* Protanope */
+main .protanopia input[type='submit'] {
+    border: 1px solid rgb(173, 139, 171);
+}
+
+main .protanopia input[type='submit']:hover {
+    background-color: rgb(173, 154, 171);
+}
+
+main .protanopia input[type='submit']:active {
+    background-color: rgb(173, 135, 171);
+}
+
+/* Deuteranope */
+main .deuteranopia input[type='submit'] {
+    border: 1px solid rgb(190, 150, 171);
+}
+
+main .deuteranopia input[type='submit']:hover {
+    background-color: rgb(190, 172, 171);
+}
+
+main .deuteranopia input[type='submit']:active {
+    background-color: rgb(190, 155, 171);
+}
+
+/* Tritanope */
+main .tritanopia input[type='submit'] {
+    border: 1px solid rgb(171, 200, 200);
+}
+
+main .tritanopia input[type='submit']:hover {
+    background-color: rgb(171, 180, 200);
+}
+
+main .tritanopia input[type='submit']:active {
+    background-color: rgb(171, 160, 200);
 }
 
 main form {
@@ -110,61 +155,6 @@ main form {
 	text-align: center;
     width: 50%;
     margin: 0 auto;
-}
-
-/* =============== DALTONISMO tag a =============== */
-
-main .protanopia a:focus,
-main .protanopia a:hover {
-    color: rgb(216, 196, 185);
-}
-
-main .deuteranopia a:focus,
-main .deuteranopia a:hover {
-    color: rgb(221, 206, 185);
-}
-
-main .tritanopia a:focus,
-main .tritanopia a:hover {
-    color: rgb(251, 211, 231);
-}
-
-/* =============== DALTONISMO tag input =============== */
-
-main .protanopia input[type='submit'] {
-	border: 1px solid rgb(216, 180, 175);
-}
-
-main .protanopia input[type='submit']:hover {
-    background-color: rgb(216, 196, 185);
-}
-
-main .protanopia input[type='submit']:active {
-    background-color: rgb(215, 184, 171);
-}
-
-main .deuteranopia input[type='submit'] {
-	border: 1px solid rgb(221, 186, 171);
-}
-
-main .deuteranopia input[type='submit']:hover {
-    background-color: rgb(221, 206, 185);
-}
-
-main .deuteranopia input[type='submit']:active {
-    background-color: rgb(220, 185, 171);
-}
-
-main .tritanopia input[type='submit'] {
-	border: 1px solid rgb(251, 191, 211);
-}
-
-main .tritanopia input[type='submit']:hover {
-    background-color: rgb(251, 211, 231);
-}
-
-main .tritanopia input[type='submit']:active {
-    background-color: rgb(250, 193, 211);
 }
 
 .form input[type='password'],
@@ -203,6 +193,7 @@ main .tritanopia input[type='submit']:active {
     border-top-right-radius: 0;
     padding: 15px 20px;
 }
+
 .login label span {
     margin: 0;
 }
@@ -277,6 +268,7 @@ main .tritanopia input[type='submit']:active {
         position: relative;
     }
 }
+
 @media screen and (max-width: 414px) {
     .overlay {
         padding: 30px 0;

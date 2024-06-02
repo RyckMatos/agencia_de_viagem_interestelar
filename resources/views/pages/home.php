@@ -3,7 +3,7 @@
 ?>
 
 <main> 
-    <div class="main-container">
+    <div class="main-container tritanopia-home tritanopia-vermelho">
         <div class="container-title">
             <h1>ESPAÇO</h1>
             <hr>

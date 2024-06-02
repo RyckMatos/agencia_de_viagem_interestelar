@@ -1,4 +1,4 @@
-<main>
+<main class="tritanopia-sncs">
     <section class="left-section">
         <section id="idSectionEmpresa">
             <h2>A Empresa</h2>
@@ -126,5 +126,4 @@
             <input type="submit" id="idEnviarOferta" value="QUERO RECEBER">
         </form>
     </section>
-
 </main>
