@@ -33,11 +33,12 @@
                 document.getElementsByClassName('dropdown')[0].style.marginTop = '0px';
             }
         }
+
     </script>
 </head>
 <body>
     <header>
-        <div class="elementor-background-header-overlay"></div>
+        
         <div class="container-header">
             <a href="<?php echo SITE ?>">
                 <div class="titulo-site">
@@ -74,6 +75,61 @@
                         </div>
                     </div>'
                 ?>
+                 <div>
+                        <label for="daltonismo">Escolha o tipo de daltonismo:</label>
+                            <select id="daltonismo">
+                                <option value="normal">Visão Normal</option>
+                                <option value="protanopia">Protanopia</option>
+                                <option value="deuteranopia">Deuteranopia</option>
+                                <option value="tritanopia">Tritanopia</option>
+                            </select>
+                        <script>
+                             // Função para salvar a opção selecionada no local storage
+                            document.getElementById("daltonismo").addEventListener("change", function() {
+                                var selectedOption = this.value;
+                                localStorage.setItem("opcaoDaltonismo", selectedOption);
+                                console.log(selectedOption);
+                                alterarImagem(selectedOption);
+                            });
+                        </script>
+                </div>
             </div>
+        </div>
+        <div class="elementor-background-header-overlay">
+            <img id="imagem" src="<?php echo SITE_IMG?>/normal/home5_normal.jpg">
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var selectElement = document.getElementById("daltonismo");
+                    if (selectElement) {
+                        selectElement.addEventListener("change", function() {
+                            var selectedOption = this.value;
+                            localStorage.setItem("opcaoDaltonismo", selectedOption);
+                            alterarImagem(selectedOption);
+                        });
+
+                        var selectedOption = localStorage.getItem("opcaoDaltonismo");
+                        if (selectedOption) {
+                            selectElement.value = selectedOption;
+                            alterarImagem(selectedOption);
+                        }
+                    } else {
+                        console.error("Elemento com ID 'daltonismo' não encontrado.");
+                    }
+                });
+
+                function alterarImagem(opcao) {
+                    var imagem = document.getElementById("imagem");
+                    var srcBase = "<?php echo SITE_IMG ?>";
+                    if (opcao === "protanopia") {
+                        imagem.src = srcBase + "/protanopia/home5_protanopia.jpg";
+                    } else if (opcao === "deuteranopia") {
+                        imagem.src = srcBase + "/deuteranopia/home5_deuteranopia.jpg";
+                    } else if (opcao === "tritanopia") {
+                        imagem.src = srcBase + "/tritanopia/home5_tritanopia.png";
+                    } else {
+                        imagem.src = srcBase + "/normal/home5_normal.jpg";
+                    }
+                }
+            </script>
         </div>
     </header>

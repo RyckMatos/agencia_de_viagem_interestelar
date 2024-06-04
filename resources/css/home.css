@@ -107,11 +107,44 @@ h5 {
 }
 
 /* =============== CONHEÇA MAIS =============== */
-.elementor-background-saiba-mais-overlay {
-    width: 100vw;
+.elementor-background-saiba-mais-overlay-normal{
+    width: 100%;
     height: 500px;
-    background-image: url('https://images2.alphacoders.com/565/565696.jpg');
+    background-image: url('../img/normal/home6_normal.jpg');
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: top center; */
+    background-size: cover; 
+}
+
+.elementor-background-saiba-mais-overlay-deuteranopia{
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/deuteranopia/home6_deuteranopia.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: top center; */
+    background-size: cover; 
+}
+
+.elementor-background-saiba-mais-overlay-protanopia{
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/protanopia/home6_protanopia.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: top center; */
+    background-size: cover; 
+}
+
+.elementor-background-saiba-mais-overlay-tritanopia{
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/tritanopia/home6_tritanopia.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-position: top center; */
+    background-size: cover; 
 }
 
 .container-saiba-mais {

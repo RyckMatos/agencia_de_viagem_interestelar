@@ -3,24 +3,131 @@
 ?>
 
 <main> 
-    <div class="main-container tritanopia-home tritanopia-vermelho">
+    <div class="main-container">
         <div class="container-title">
             <h1>ESPAÇO</h1>
             <hr>
         </div>
         <div class="card">
-            <div class="fakeimg"><img src="https://images2.alphacoders.com/549/thumb-1920-549920.jpg" alt="imagem-da-galaxia"></div>
+            <div class="fakeimg"><img id="home1" src="<?php echo SITE_IMG?>/deuteranopia/home1_deuteranotopia.jpg" alt="imagem-da-galaxia" >
+            <script>
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    var selectElement = document.getElementById("daltonismo");
+                    if (selectElement) {
+                        selectElement.addEventListener("change", function() {
+                            var selectedOption = this.value;
+                            localStorage.setItem("opcaoDaltonismo", selectedOption);
+                            alterarImagemSpace(selectedOption);
+                        });
+
+                        var selectedOption = localStorage.getItem("opcaoDaltonismo");
+                        if (selectedOption) {
+                            selectElement.value = selectedOption;
+                            alterarImagemSpace(selectedOption);
+                        }
+                    } else {
+                        console.error("Elemento com ID 'daltonismo' não encontrado.");
+                    }
+                });
+
+                function alterarImagemSpace(opcao) {
+                    var imagem = document.getElementById("home1");
+                    var srcBase = "<?php echo SITE_IMG ?>";
+                    if (opcao === "protanopia") {
+                        imagem.src = srcBase + "/protanopia/home1_protanopia.jpg";
+                    } else if (opcao === "deuteranopia") {
+                        imagem.src = srcBase + "/deuteranopia/home1_deuteranopia.jpg";
+                    } else if (opcao === "tritanopia") {
+                        imagem.src = srcBase + "/tritanopia/home1_tritanopia.png";
+                    } else {
+                        imagem.src = srcBase + "/normal/home1_normal.jpg";
+                    }
+                }
+            </script>
+            </div>
             <h2>Galáxia</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in..</p>
             <a href="#" class="button-learn-more">SAIBA MAIS</a>
         </div>
         <div class="card">
-            <div class="fakeimg"><img src="https://th.bing.com/th/id/R.04658acef998484691ca09e340b8db45?rik=kRzvQ6dm92Ot%2bQ&riu=http%3a%2f%2fnoticiasncc.com%2fwp-content%2fuploads%2f2018%2f07%2fvia-lactea.jpg&ehk=ZQTP5s9Opr4P0fpRUKiLF5%2fPot47c48lKA%2bZ9gAp0VA%3d&risl=&pid=ImgRaw&r=0" alt="imagem-via-láctea"></div>
+            <div class="fakeimg"><img id="home2" src="<?php echo SITE_IMG?>/normal/home2_normal.jpeg" alt="imagem-via-láctea">
+                <script>
+
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var selectElement = document.getElementById("daltonismo");
+                            if (selectElement) {
+                                selectElement.addEventListener("change", function() {
+                                    var selectedOption = this.value;
+                                    localStorage.setItem("opcaoDaltonismo", selectedOption);
+                                    alterarImagemVia(selectedOption);
+                                });
+
+                                var selectedOption = localStorage.getItem("opcaoDaltonismo");
+                                if (selectedOption) {
+                                    selectElement.value = selectedOption;
+                                    alterarImagemVia(selectedOption);
+                                }
+                            } else {
+                                console.error("Elemento com ID 'daltonismo' não encontrado.");
+                            }
+                        });
+
+                        function alterarImagemVia(opcao) {
+                            var imagem = document.getElementById("home2");
+                            var srcBase = "<?php echo SITE_IMG ?>";
+                            if (opcao === "protanopia") {
+                                imagem.src = srcBase + "/protanopia/home2_protanopia.jpg";
+                            } else if (opcao === "deuteranopia") {
+                                imagem.src = srcBase + "/deuteranopia/home2_deuteranopia.jpg";
+                            } else if (opcao === "tritanopia") {
+                                imagem.src = srcBase + "/tritanopia/home2_tritanopia.png";
+                            } else {
+                                imagem.src = srcBase + "/normal/home2_normal.jpeg";
+                            }
+                        }
+                    </script>
+            </div>
             <h2>Via Láctea</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis erat eget fringilla rhoncus. Aenean scelerisque est sed orci cursus finibus. Sed tristique erat urna, cursus lobortis lacus aliquam at. Sed aliquet magna vitae volutpat ullamcorper. Etiam vulputate blandit libero, in sodales nunc condimentum in..</p>
             <a href="#" class="button-learn-more">SAIBA MAIS</a>
         </div>
-        <div class="elementor-background-saiba-mais-overlay">
+        <div id='spaceAstronaut' class="elementor-background-saiba-mais-overlay-normal">
+        <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var selectElement = document.getElementById("daltonismo");
+    if (selectElement) {
+        selectElement.addEventListener("change", function() {
+            var selectedOption = this.value;
+            localStorage.setItem("opcaoDaltonismo", selectedOption);
+            alterarImagemSpaceAstronaut(selectedOption);
+        });
+
+        var selectedOption = localStorage.getItem("opcaoDaltonismo");
+        if (selectedOption) {
+            selectElement.value = selectedOption;
+            alterarImagemSpaceAstronaut(selectedOption);
+        }
+    } else {
+        console.error("Elemento com ID 'daltonismo' não encontrado.");
+    }
+});
+
+function alterarImagemSpaceAstronaut(opcao) {
+    var imagem = document.getElementById('spaceAstronaut');
+  
+    if (opcao === "protanopia") {
+        imagem.className = "elementor-background-saiba-mais-overlay-protanopia";
+    } else if (opcao === "deuteranopia") {
+        imagem.className = "elementor-background-saiba-mais-overlay-deuteranopia";
+    } else if (opcao === "tritanopia") {
+        imagem.className = "elementor-background-saiba-mais-overlay-tritanopia";
+    } else {
+        imagem.className = "elementor-background-saiba-mais-overlay-normal";
+    }
+}
+</script>
+                        
             <div class="container-saiba-mais">
                 <div class="card-saiba-mais">
                     <h1>CONHEÇA O ESPAÇO</h1>
@@ -39,11 +146,79 @@
                     <a href="#" class="button-learn-more">SAIBA MAIS</a>
                 </div>
                 <div class="card-double-img">
-                    <img src="https://brasiltravelnews.com.br/wp-content/uploads/2021/06/image-7.jpg" alt="imagem-da-base-espacial">
-                    <img src="https://techbreak.ig.com.br/wp-content/uploads/2021/06/CapsuleFloridaAbove_110521-e1624478218269.jpg" alt="imagem-da-base-espacial-visa-de-cima">
-                </div>
-                <div class="card-single-img">
-                    <img src="https://th.bing.com/th/id/OIP.PdJzFrCJ_kCqBWPKgkgpUgHaNB?pid=ImgDet&rs=1" alt="imagem-do-ponto-turístico">
+                <img id="home3" src="<?php echo SITE_IMG?>/normal/home3_normal.jpg" alt="imagem-da-base-espacial">
+                <script>
+
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var selectElement = document.getElementById("daltonismo");
+                            if (selectElement) {
+                                selectElement.addEventListener("change", function() {
+                                    var selectedOption = this.value;
+                                    localStorage.setItem("opcaoDaltonismo", selectedOption);
+                                    alterarImagemBase(selectedOption);
+                                });
+
+                                var selectedOption = localStorage.getItem("opcaoDaltonismo");
+                                if (selectedOption) {
+                                    selectElement.value = selectedOption;
+                                    alterarImagemBase(selectedOption);
+                                }
+                            } else {
+                                console.error("Elemento com ID 'daltonismo' não encontrado.");
+                            }
+                        });
+
+                        function alterarImagemBase(opcao) {
+                            var imagem = document.getElementById("home3");
+                            var srcBase = "<?php echo SITE_IMG ?>";
+                            if (opcao === "protanopia") {
+                                imagem.src = srcBase + "/protanopia/home3_protanopia.jpg";
+                            } else if (opcao === "deuteranopia") {
+                                imagem.src = srcBase + "/deuteranopia/home3_deuteranopia.jpg";
+                            } else if (opcao === "tritanopia") {
+                                imagem.src = srcBase + "/tritanopia/home3_tritanopia.png";
+                            } else {
+                                imagem.src = srcBase + "/normal/home3_normal.jpg";
+                            }
+                        }
+                    </script>   
+                
+                    <img id="home4" src="<?php echo SITE_IMG?>/normal/home4_normal.jpg" alt="imagem-da-base-espacial-visa-de-cima">
+                <script>
+
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var selectElement = document.getElementById("daltonismo");
+                            if (selectElement) {
+                                selectElement.addEventListener("change", function() {
+                                    var selectedOption = this.value;
+                                    localStorage.setItem("opcaoDaltonismo", selectedOption);
+                                    alterarImagemBaseUp(selectedOption);
+                                });
+
+                                var selectedOption = localStorage.getItem("opcaoDaltonismo");
+                                if (selectedOption) {
+                                    selectElement.value = selectedOption;
+                                    alterarImagemBaseUp(selectedOption);
+                                }
+                            } else {
+                                console.error("Elemento com ID 'daltonismo' não encontrado.");
+                            }
+                        });
+
+                        function alterarImagemBaseUp(opcao) {
+                            var imagem = document.getElementById("home4");
+                            var srcBase = "<?php echo SITE_IMG ?>";
+                            if (opcao === "protanopia") {
+                                imagem.src = srcBase + "/protanopia/home4_protanopia.jpg";
+                            } else if (opcao === "deuteranopia") {
+                                imagem.src = srcBase + "/deuteranopia/home4_deuteranopia.jpg";
+                            } else if (opcao === "tritanopia") {
+                                imagem.src = srcBase + "/tritanopia/home4_tritanopia.png";
+                            } else {
+                                imagem.src = srcBase + "/normal/home4_normal.jpg";
+                            }
+                        }
+                    </script>    
                 </div>
             </div>
         </div>
