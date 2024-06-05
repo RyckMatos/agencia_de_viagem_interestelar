@@ -75,7 +75,7 @@
                         </div>
                     </div>'
                 ?>
-                 <div class="link-nav" >
+                 <div class="link-nav">
                         <label for="daltonismo">Escolha o tipo de daltonismo:</label>
                             <select id="daltonismo">
                                 <option value="normal">Visão Normal</option>
@@ -87,9 +87,8 @@
                              // Função para salvar a opção selecionada no local storage
                             document.getElementById("daltonismo").addEventListener("change", function() {
                                 var selectedOption = this.value;
-                                var currentUrl = window.location.pathname;
                                 localStorage.setItem("opcaoDaltonismo", selectedOption);
-                                console.log(selectedOption+" "+currentUrl);
+                                console.log(selectedOption);
                                 alterarImagem(selectedOption);
                             });
                         </script>
@@ -101,16 +100,6 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
             // Função para esconder a div se não estiver na home
-            function checkIfHomePage() {
-                var headerOverlay = document.getElementById("elementor-background-header-overlay");
-                var currentUrl = window.location.pathname;
-                if (currentUrl !== "/agencia_de_viagem_interestelar") { // Ajuste isso para corresponder ao caminho da sua página inicial
-                    headerOverlay.style.display = "none";
-                }
-            }
-
-            // Chame a função quando a página carregar
-            checkIfHomePage();
 
             // Código existente para alterar a imagem com base na seleção
             var selectElement = document.getElementById("daltonismo");
