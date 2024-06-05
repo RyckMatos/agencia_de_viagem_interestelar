@@ -86,22 +86,22 @@
 /* =============== DALTONISMO main a:focus, main a:hover pag login e cadastro =============== */
 
 /* Protanope */
-main .protanopia-login a:focus,
-main .protanopia-login a:hover {
+.protanopia-login a:focus,
+.protanopia-login a:hover {
     text-decoration: underline;
     color: rgb(173, 154, 171);
 }
 
 /* Deuteranope */
-main .deuteranopia-login a:focus,
-main .deuteranopia-login a:hover {
+.deuteranopia-login a:focus,
+.deuteranopia-login a:hover {
     text-decoration: underline;
     color: rgb(190, 172, 171);
 }
 
 /* Tritanope */
-main .tritanopia-login a:focus,
-main .tritanopia-login a:hover {
+.tritanopia-login a:focus,
+.tritanopia-login a:hover {
     text-decoration: underline;
     color: rgb(171, 180, 200);
 }
@@ -109,41 +109,41 @@ main .tritanopia-login a:hover {
 /* =============== DALTONISMO main input[type='submit'] pag login e cadastro =============== */
 
 /* Protanope */
-main .protanopia-login input[type='submit'] {
+.protanopia-login input[type='submit'] {
     border: 1px solid rgb(173, 139, 171);
 }
 
-main .protanopia-login input[type='submit']:hover {
+.protanopia-login input[type='submit']:hover {
     background-color: rgb(173, 154, 171);
 }
 
-main .protanopia-login input[type='submit']:active {
+.protanopia-login input[type='submit']:active {
     background-color: rgb(173, 135, 171);
 }
 
 /* Deuteranope */
-main .deuteranopia-login input[type='submit'] {
+.deuteranopia-login input[type='submit'] {
     border: 1px solid rgb(190, 150, 171);
 }
 
-main .deuteranopia-login input[type='submit']:hover {
+.deuteranopia-login input[type='submit']:hover {
     background-color: rgb(190, 172, 171);
 }
 
-main .deuteranopia-login input[type='submit']:active {
+.deuteranopia-login input[type='submit']:active {
     background-color: rgb(190, 155, 171);
 }
 
 /* Tritanope */
-main .tritanopia-login input[type='submit'] {
+.tritanopia-login input[type='submit'] {
     border: 1px solid rgb(171, 200, 200);
 }
 
-main .tritanopia-login input[type='submit']:hover {
+.tritanopia-login input[type='submit']:hover {
     background-color: rgb(171, 180, 200);
 }
 
-main .tritanopia-login input[type='submit']:active {
+.tritanopia-login input[type='submit']:active {
     background-color: rgb(171, 160, 200);
 }
 

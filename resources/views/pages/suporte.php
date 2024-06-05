@@ -1,5 +1,5 @@
 <main>
-    <div class="background-form tritanopia-sncs">
+    <div class="background-form">
         <h2 class="title-main">Suporte 🚀</h2>
         <form>
             <div class="form-ocorrencia">

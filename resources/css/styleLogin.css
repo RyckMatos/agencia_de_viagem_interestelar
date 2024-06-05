@@ -145,6 +145,20 @@ header h1 {
     cursor: pointer;
 }
 
+.daltonismo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+.daltonismo label {
+    color: black;
+}
+
+.daltonismo select {
+    border-radius: 10px;
+}
+
 /* ============================== FOOTER ============================== */
 
 footer {

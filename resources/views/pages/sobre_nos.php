@@ -1,4 +1,4 @@
-<main class="tritanopia-sncs">
+<main>
     <section class="left-section">
         <section id="idSectionEmpresa">
             <h2>A Empresa</h2>
