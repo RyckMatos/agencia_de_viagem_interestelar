@@ -126,5 +126,4 @@
             <input type="submit" id="idEnviarOferta" value="QUERO RECEBER">
         </form>
     </section>
-
 </main>

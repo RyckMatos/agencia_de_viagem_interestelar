@@ -72,9 +72,11 @@ section p {
     margin: 0 auto;
     margin-bottom: 20px;
 }
+
 #idMensagemForm {
     resize: none;
 }
+
 input[type=submit] {
     display: block;
     width: 200px;

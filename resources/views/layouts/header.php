@@ -10,6 +10,7 @@
     <title><?php echo self::titulo; ?></title>
     <link rel="stylesheet" href="<?php echo SITE_CSS.$arr['link_css_base'] ?>">
     <link rel="stylesheet" href="<?php echo SITE_CSS.$arr['link_css'] ?>">
+    <link rel="stylesheet" href="<?php echo SITE_CSS.'colorBlindness.css' ?>"><!-- CSS para simular daltonismo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
@@ -32,16 +33,75 @@
                 document.getElementsByClassName('dropdown')[0].style.marginTop = '0px';
             }
         }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const opcaoDaltonismo = localStorage.getItem("opcaoDaltonismo") || 'normal';
+            document.getElementById('daltonismo').value = opcaoDaltonismo;
+            alterarCor(opcaoDaltonismo);
+        });
+
+        
+        function alterarCor(tipo) {
+            const mainElement = document.querySelector('main');
+            mainElement.className = '';
+
+            const path = window.location.pathname.split('/')[2];
+
+            if (path === '') {
+                alterarImagem(tipo);
+                if (tipo === 'protanopia') {
+                    mainElement.classList.add('protanopia-vermelho', 'protanopia-home');
+                } else if (tipo === 'deuteranopia') {
+                    mainElement.classList.add('deuteranopia-vermelho', 'deuteranopia-home');
+                } else if (tipo === 'tritanopia') {
+                    mainElement.classList.add('tritanopia-vermelho', 'tritanopia-home');
+                } else {
+                    mainElement.classList.add('original-vermelho');
+                }
+            } else if (path === 'sobre-nos' || path === 'contato' || path === 'suporte') {
+                if (tipo === 'protanopia') {
+                    mainElement.classList.add('protanopia-sncs');
+                } else if (tipo === 'deuteranopia') {
+                    mainElement.classList.add('deuteranopia-sncs');
+                } else if (tipo === 'tritanopia') {
+                    mainElement.classList.add('tritanopia-sncs');
+                }
+            } else if (path === 'login' || path === 'cadastrar') {
+                if (tipo === 'protanopia') {
+                    mainElement.classList.add('protanopia-azul', 'protanopia-login');
+                } else if (tipo === 'deuteranopia') {
+                    mainElement.classList.add('deuteranopia-azul', 'deuteranopia-login');
+                } else if (tipo === 'tritanopia') {
+                    mainElement.classList.add('tritanopia-azul', 'tritanopia-login');
+                } else {
+                    mainElement.classList.add('original-azul');
+                }
+            }
+
+            localStorage.setItem("opcaoDaltonismo", tipo);
+        }
+
+        function alterarImagem(opcao) {
+            var imagem = document.getElementById("imagem");
+            var srcBase = "<?php echo SITE_IMG ?>";
+            if (opcao === "protanopia") {
+                imagem.src = srcBase + "/protanopia/home5_protanopia.jpg";
+            } else if (opcao === "deuteranopia") {
+                imagem.src = srcBase + "/deuteranopia/home5_deuteranopia.jpg";
+            } else if (opcao === "tritanopia") {
+                imagem.src = srcBase + "/tritanopia/home5_tritanopia.png";
+            } else {
+                imagem.src = srcBase + "/normal/home5_normal.jpg";
+            }
+        }
     </script>
 </head>
 <body>
     <header>
-        <div class="elementor-background-header-overlay"></div>
         <div class="container-header">
             <a href="<?php echo SITE ?>">
                 <div class="titulo-site">
                     <h1>Space Agency</h1>
-                    <p>Description my website.</p>
                 </div>
             </a>
             <div class="topnav">
@@ -73,6 +133,18 @@
                         </div>
                     </div>'
                 ?>
+                <div class="daltonismo">
+                    <label for="daltonismo">Escolha o tipo de daltonismo:</label>
+                    <select id="daltonismo" onchange="alterarCor(this.value)">
+                        <option value="normal">Visão Normal</option>
+                        <option value="protanopia">Protanopia</option>
+                        <option value="deuteranopia">Deuteranopia</option>
+                        <option value="tritanopia">Tritanopia</option>
+                    </select>
+                </div>
             </div>
+        </div>
+        <div class="elementor-background-header-overlay">
+            <img id="imagem" src="">
         </div>
     </header>
