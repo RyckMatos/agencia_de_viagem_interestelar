@@ -1,10 +1,6 @@
     <footer>
         <div class="elementor-background-footer-overlay"></div>
-        <div class="footer-container">
-          
-           
-          
-        </div>
+        <div class="footer-container"></div>
         <div class="copyright">
             <hr>
             <p>© Copyright 2022. Todos os direitos reservados.</p>

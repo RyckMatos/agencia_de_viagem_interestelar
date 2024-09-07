@@ -36,7 +36,6 @@ main {
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     min-height: 600px;
-    /*trocar para auto*/
 }
 
 main h1 {

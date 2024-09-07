@@ -2,7 +2,6 @@
 
 main {
     min-height: 1080px;
-    /*trocar para auto*/
     height: auto;
 }
 
@@ -114,7 +113,6 @@ h5 {
     background-image: url('../img/normal/home6_normal.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* background-position: top center; */
     background-size: cover;
 }
 
@@ -124,7 +122,6 @@ h5 {
     background-image: url('../img/deuteranopia/home6_deuteranopia.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* background-position: top center; */
     background-size: cover;
 }
 
@@ -134,7 +131,6 @@ h5 {
     background-image: url('../img/protanopia/home6_protanopia.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* background-position: top center; */
     background-size: cover;
 }
 
@@ -144,7 +140,6 @@ h5 {
     background-image: url('../img/tritanopia/home6_tritanopia.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* background-position: top center; */
     background-size: cover;
 }
 

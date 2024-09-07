@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Poppins', sans-serif; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -35,7 +34,6 @@ header h1 {
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
-    /* background-color: #333; */
     background-color: rgb(93, 93, 93);
     margin-bottom: 50px;
 }
