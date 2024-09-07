@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat";
+
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +17,8 @@ body {
 /* ============================== MENU PERFIL ============================== */
 
 .menu {
-    width:260px;
-    cursor:pointer;
+    width: 260px;
+    cursor: pointer;
 }
 
 .menu a {
@@ -32,63 +33,63 @@ body {
 }
 
 .title {
-    width:260px;
-    box-sizing:border-box;
-    border-radius:4px;
-    position:relative;
-    box-shadow:0 0 40px -10px #000;
-    color:white;
+    width: 260px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 40px -10px #000;
+    color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .menu span {
-    float:right;
-    font-size:18px!important;
+    float: right;
+    font-size: 18px !important;
 }
 
 .dropdown {
-    width:260px;
-    background:#fff;
-    border-radius:4px;
-    box-shadow:0 0 40px -10px #000;
-    color:#505050;
-    max-height:0;
-    overflow:hidden;
-    transition:all .5s;
+    width: 260px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 40px -10px #000;
+    color: #505050;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
     position: absolute !important;
 }
 
 .down {
-    max-height:171px;
+    max-height: 171px;
 }
 
 .arrow {
-    border-left:10px solid transparent;
-    border-right:10px solid transparent;
-    border-bottom:10px solid #fff;
-    position:absolute;
-    right:20px;
-    bottom:-24px;
-    display:none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    right: 20px;
+    bottom: -24px;
+    display: none;
 }
 
 .arrow.gone {
-    display:block;
+    display: block;
 }
 
 .menu p {
-    padding:15px 14px;
-    margin:0;
-    transition:all .1s;
+    padding: 15px 14px;
+    margin: 0;
+    transition: all .1s;
 }
 
 .menu p:hover {
-    background:coral;
-    --webkit-transform:scale(1.05);
-    color:rgba(255,255,255,0.8);
-    box-shadow:0 0 30px -10px #000;
+    background: coral;
+    --webkit-transform: scale(1.05);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px -10px #000;
 }
 
 /* ============================== HEADER ============================== */
@@ -99,17 +100,17 @@ header {
     color: white;
 }
 
-.elementor-background-header-overlay #imagem{
+.elementor-background-header-overlay #imagem {
     z-index: -1;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     position: absolute;
-   /* background-image: url('https://th.bing.com/th/id/R.c628ba63ddce25df92defa1713911300?rik=uTWLTi%2bFBVJjIA&riu=http%3a%2f%2fcdn.superbook.cbn.com%2fsites%2fdefault%2ffiles%2fgames%2fbackground%2f1916x1080_SpaceRace_Background.jpg&ehk=Hnvhj17xT7WPybNjZKowMgJaWtMxs5vymzjY5r8bQ4w%3d&risl=&pid=ImgRaw&r=0');*/
+    /* background-image: url('https://th.bing.com/th/id/R.c628ba63ddce25df92defa1713911300?rik=uTWLTi%2bFBVJjIA&riu=http%3a%2f%2fcdn.superbook.cbn.com%2fsites%2fdefault%2ffiles%2fgames%2fbackground%2f1916x1080_SpaceRace_Background.jpg&ehk=Hnvhj17xT7WPybNjZKowMgJaWtMxs5vymzjY5r8bQ4w%3d&risl=&pid=ImgRaw&r=0');*/
     background-position: center right;
     opacity: 0.88;
-    filter: brightness( 80% ) contrast( 115% ) saturate( 100% ) blur( 0.3px ) hue-rotate( 0deg );
+    filter: brightness(80%) contrast(115%) saturate(100%) blur(0.3px) hue-rotate(0deg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -137,7 +138,7 @@ header h1 {
     justify-content: center;
     flex-wrap: wrap;
 }
-  
+
 .link-nav {
     float: left;
     display: block;
@@ -204,7 +205,7 @@ footer {
     background-image: url('https://acegif.com/wp-content/gif/outerspace-58.gif');
     background-position: center right;
     opacity: 0.88;
-    filter: brightness( 25% ) contrast( 115% ) saturate( 100% ) blur( 0.3px ) hue-rotate( 0deg );
+    filter: brightness(25%) contrast(115%) saturate(100%) blur(0.3px) hue-rotate(0deg);
 }
 
 footer .copyright {
@@ -234,7 +235,7 @@ footer div:last-of-type {
 
 footer div hr {
     width: 50px;
-    background-color: rgb(200,200,200);
+    background-color: rgb(200, 200, 200);
     border: solid 2px rgb(200, 200, 200);
     border-radius: 50px;
     margin-top: 2px;
@@ -267,7 +268,8 @@ footer .footer-content-sobre p {
     letter-spacing: 0.01em;
 }
 
-footer .footer-content-sobre p .read-less, footer .footer-content-sobre p .read-more {
+footer .footer-content-sobre p .read-less,
+footer .footer-content-sobre p .read-more {
     color: white;
     cursor: pointer;
 }
@@ -320,6 +322,7 @@ footer .content-group-contato {
 footer .content-group-contato span {
     font-weight: 500;
 }
+
 footer .content-group-contato p {
     margin-bottom: 5px;
     color: white;
@@ -334,10 +337,12 @@ footer .content-group-contato p {
         grid-gap: 50px 0;
         margin-bottom: 50px;
     }
+
     footer .footer-content-links {
         width: 50%;
         padding-right: 20px;
     }
+
     footer .footer-content-contato {
         width: 50%;
     }
@@ -348,6 +353,7 @@ footer .content-group-contato p {
         width: 100%;
         padding-right: 0;
     }
+
     footer .footer-content-contato {
         width: 100%;
     }
@@ -357,11 +363,13 @@ footer .content-group-contato p {
     header {
         height: auto;
     }
+
     .topnav a {
         float: none;
         width: 100%;
     }
+
     footer .footer-content-contato {
         width: 100%;
     }
-} */
+}

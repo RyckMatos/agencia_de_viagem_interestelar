@@ -1,7 +1,8 @@
 /* =============== MAIN =============== */
 
 main {
-    min-height: 1080px;/*trocar para auto*/
+    min-height: 1080px;
+    /*trocar para auto*/
     height: auto;
 }
 
@@ -19,9 +20,9 @@ p {
 h5 {
     font-size: 15px;
 }
-  
+
 /* =============== CARD PRINCIPAL =============== */
-.main-container {   
+.main-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -107,44 +108,44 @@ h5 {
 }
 
 /* =============== CONHEÇA MAIS =============== */
-.elementor-background-saiba-mais-overlay-normal{
+.elementor-background-saiba-mais-overlay-normal {
     width: 100%;
     height: 500px;
     background-image: url('../img/normal/home6_normal.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     /* background-position: top center; */
-    background-size: cover; 
+    background-size: cover;
 }
 
-.elementor-background-saiba-mais-overlay-deuteranopia{
+.elementor-background-saiba-mais-overlay-deuteranopia {
     width: 100%;
     height: 500px;
     background-image: url('../img/deuteranopia/home6_deuteranopia.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     /* background-position: top center; */
-    background-size: cover; 
+    background-size: cover;
 }
 
-.elementor-background-saiba-mais-overlay-protanopia{
+.elementor-background-saiba-mais-overlay-protanopia {
     width: 100%;
     height: 500px;
     background-image: url('../img/protanopia/home6_protanopia.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     /* background-position: top center; */
-    background-size: cover; 
+    background-size: cover;
 }
 
-.elementor-background-saiba-mais-overlay-tritanopia{
+.elementor-background-saiba-mais-overlay-tritanopia {
     width: 100%;
     height: 500px;
     background-image: url('../img/tritanopia/home6_tritanopia.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
     /* background-position: top center; */
-    background-size: cover; 
+    background-size: cover;
 }
 
 .container-saiba-mais {
@@ -194,7 +195,9 @@ h5 {
     margin: 80px auto;
 }
 
-.content-card-pagamento, .card-double-img, .card-single-img {
+.content-card-pagamento,
+.card-double-img,
+.card-single-img {
     padding: 10px;
 }
 
@@ -258,33 +261,42 @@ h5 {
     .topnav {
         display: flex;
     }
+
     .card {
         width: 100%;
         max-width: 747px;
     }
+
     .container-saiba-mais {
         flex-wrap: wrap;
     }
+
     .card-saiba-mais {
         margin: 0 12px;
     }
+
     .card-saiba-mais a {
         margin-bottom: 25px;
     }
+
     .fakeimg img {
         max-width: 747px;
         max-height: 419px;
     }
+
     .card-pagamento {
         flex-wrap: wrap;
         height: 100%;
     }
+
     .content-card-pagamento {
         width: 100%;
     }
+
     .card-double-img {
         width: 100%;
     }
+
     .card-single-img {
         width: 100%;
         height: 860px;

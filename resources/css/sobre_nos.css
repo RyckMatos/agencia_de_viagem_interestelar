@@ -4,13 +4,14 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 main {
     width: 80%;
     min-height: 720px;
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
-    color:#505050;
+    color: #505050;
     display: flex;
     justify-content: space-between;
 }
@@ -18,12 +19,14 @@ main {
 section {
     margin-bottom: 40px;
 }
+
 section h2 {
     font-size: 28px;
     color: rgb(59, 59, 59);
     font-weight: 700;
     margin-bottom: 10px;
 }
+
 section h3 {
     font-size: 24px;
     color: rgb(59, 59, 59);
@@ -31,6 +34,7 @@ section h3 {
     margin-top: 40px;
     margin-bottom: 10px;
 }
+
 section p {
     text-align: justify;
     font-size: 20px;
@@ -40,6 +44,7 @@ section p {
     line-height: 1.5;
     letter-spacing: 0.01em;
 }
+
 .left-section {
     width: 60%;
 }
@@ -48,6 +53,7 @@ section p {
     width: 150px;
     height: 150px;
 }
+
 .background-form {
     background-color: rgba(126, 126, 126, 0.05);
     box-shadow: 1px 1px 10px 2px rgba(126, 126, 126, 0.2);
@@ -56,16 +62,23 @@ section p {
     width: 30%;
     height: 100%;
 }
-.center h2, .center img {
+
+.center h2,
+.center img {
     text-align: center;
     display: block;
     margin: 0 auto;
 }
+
 #idFormOferta {
     width: 100%;
     margin-top: 20px;
 }
-#idNomeForm, #idEmailForm, #idAssuntoForm, #idMensagemForm {
+
+#idNomeForm,
+#idEmailForm,
+#idAssuntoForm,
+#idMensagemForm {
     width: 100%;
     padding: 6px;
     font-size: 16px;
@@ -90,10 +103,12 @@ input[type=submit] {
     color: white;
     font-weight: 500;
 }
+
 input[type=submit]:hover {
     background-color: rgb(50, 180, 75);
     border: 1px solid rgb(50, 170, 75);
 }
+
 input[type=submit]:active {
     background-color: rgb(50, 160, 75);
     border: 1px solid rgb(50, 150, 75);
@@ -104,19 +119,23 @@ input[type=submit]:active {
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
+
     .left-section {
         width: 100%;
     }
+
     .background-form {
         width: 40%;
         margin: 60px auto;
     }
 }
+
 @media screen and (max-width: 1024px) {
     .background-form {
         width: 70%;
     }
 }
+
 @media screen and (max-width: 720px) {
     .background-form {
         width: 100%;

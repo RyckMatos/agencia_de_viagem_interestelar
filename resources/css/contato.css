@@ -4,13 +4,15 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 main {
     width: 715px;
     min-height: 720px;
     margin: 0 auto;
     position: relative;
-    color:#505050;
+    color: #505050;
 }
+
 .background-form {
     background-color: rgba(126, 126, 126, 0.05);
     box-shadow: 1px 1px 10px 2px rgba(126, 126, 126, 0.2);
@@ -21,18 +23,23 @@ main {
     padding: 15px;
     text-align: left;
 }
+
 form {
     width: 100%;
-    
+
 }
-label, p {
+
+label,
+p {
     font-size: 18px;
     font-weight: 400;
 }
+
 .w100 {
     display: flex;
     width: 100%;
 }
+
 .w50 {
     display: flex;
     width: 50%;
@@ -44,15 +51,19 @@ label, p {
     margin-bottom: 20px;
 }
 
-.form-ocorrencia, .form-formulario {
+.form-ocorrencia,
+.form-formulario {
     margin-bottom: 20px;
 }
 
-.form-ocorrencia h2, .form-formulario h2 {
+.form-ocorrencia h2,
+.form-formulario h2 {
     margin-bottom: 20px;
     margin-left: 15px;
 }
-.form-ocorrencia input, .form-formulario input {
+
+.form-ocorrencia input,
+.form-formulario input {
     font-size: 16px;
     padding: 5px;
 }
@@ -62,6 +73,7 @@ label, p {
     width: 100%;
     margin-bottom: 8px;
 }
+
 .linha-ocorrencia input {
     width: 20px;
     height: 20px;
@@ -76,7 +88,8 @@ label, p {
     display: block;
 }
 
-.linha-form div, .linha-form input {
+.linha-form div,
+.linha-form input {
     width: 100%;
 }
 
@@ -109,10 +122,12 @@ input[type=submit] {
     color: white;
     font-weight: 500;
 }
+
 input[type=submit]:hover {
     background-color: rgb(50, 180, 75);
     border: 1px solid rgb(50, 170, 75);
 }
+
 input[type=submit]:active {
     background-color: rgb(50, 160, 75);
     border: 1px solid rgb(50, 150, 75);
@@ -123,13 +138,16 @@ input[type=submit]:active {
         width: 90%;
     }
 }
+
 @media screen and (max-width: 478px) {
     .w100 {
         display: block;
     }
+
     .linha-form div {
         margin-bottom: 20px;
     }
+
     header {
         height: auto;
         margin-bottom: 30px;

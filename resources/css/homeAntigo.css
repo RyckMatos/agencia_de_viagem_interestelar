@@ -1,9 +1,10 @@
 /* ============================== MAIN ============================== */
 
-main{
+main {
     width: 70%;
     max-width: 1536px;
-    min-height: 1080px;/*trocar para auto*/
+    min-height: 1080px;
+    /*trocar para auto*/
     height: auto;
     margin: 0 auto;
 }
@@ -15,26 +16,26 @@ main:after {
     clear: both;
 }
 
-p{
+p {
     font-size: 18px;
 }
 
-h5{
+h5 {
     font-size: 15px;
 }
-  
+
 /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn {   
+.leftcolumn {
     float: left;
     width: 75%;
 }
 
-.leftcolumn h5{
+.leftcolumn h5 {
     margin-top: 2px;
     margin-bottom: 8px;
 }
-  
+
 /* Right column */
 .rightcolumn {
     float: left;
@@ -43,10 +44,11 @@ h5{
     padding-left: 20px;
 }
 
-.rightcolumn h2, .rightcolumn h3{
+.rightcolumn h2,
+.rightcolumn h3 {
     margin-bottom: 15px;
 }
-  
+
 /* Fake image */
 .fakeimg {
     background-color: #aaa;
@@ -54,7 +56,7 @@ h5{
     padding: 20px;
     margin-bottom: 10px;
 }
-  
+
 /* Add a card effect for articles */
 .card {
     background-color: white;
@@ -63,18 +65,22 @@ h5{
 }
 
 @media screen and (max-width: 1536px) {
-    main{
+    main {
         width: 80%;
     }
 }
+
 @media screen and (max-width: 1024px) {
-    main{
+    main {
         width: 90%;
     }
 }
+
 @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
     }
 }

@@ -25,14 +25,14 @@
                 <hr>
                 <div class="content-group-links">
                 <div>
-                        <a href="<?php echo SITE.'/sobre-nos' ?>"><p>Sobre nos</p></a>
+                        <a href="<?php echo SITE . '/sobre-nos' ?>"><p>Sobre nos</p></a>
                         <a href="#"><p>Política de privacidade</p></a>
                         <a href="#"><p>Termos de uso</p></a>
-                        <a href="<?php echo SITE.'/contato' ?>"><p>Contato</p></a>
-                        <a href="<?php echo SITE.'/suporte' ?>"><p>Suporte</p></a>
+                        <a href="<?php echo SITE . '/contato' ?>"><p>Contato</p></a>
+                        <a href="<?php echo SITE . '/suporte' ?>"><p>Suporte</p></a>
                     </div>
                     <div>
-                        <a href="<?php echo SITE.'/curiosidade' ?>"><p>Curiosidades do espaço</p></a>
+                        <a href="<?php echo SITE . '/curiosidade' ?>"><p>Curiosidades do espaço</p></a>
                         <a href="#"><p>Viagens</p></a>
                         <a href="#"><p>Simulador de viagem</p></a>
                         <a href="#"><p>Simulador de cotação</p></a>
@@ -68,17 +68,17 @@
         }
         var telMask = ['(99) 9999-9999','(99) 99999-9999'];
 
-		function maskPhone() {
-			let inputPhone = document.getElementById('cadastro__tell');
-			console.log(inputPhone);
-			if(inputPhone.value.length == 14) {
-				VMasker(inputPhone).maskPattern(telMask[0]);
-			}else if(inputPhone.value.length == 15) {
-				VMasker(inputPhone).maskPattern(telMask[1]);
-			}
-			inputPhone.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
-			inputPhone.addEventListener('change', inputHandler.bind(undefined, telMask, 14), false);
-		}
+        function maskPhone() {
+            let inputPhone = document.getElementById('cadastro__tell');
+            console.log(inputPhone);
+            if(inputPhone.value.length == 14) {
+                VMasker(inputPhone).maskPattern(telMask[0]);
+            }else if(inputPhone.value.length == 15) {
+                VMasker(inputPhone).maskPattern(telMask[1]);
+            }
+            inputPhone.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+            inputPhone.addEventListener('change', inputHandler.bind(undefined, telMask, 14), false);
+        }
 
         document.querySelectorAll('.footer-container').forEach(function (el) {
    

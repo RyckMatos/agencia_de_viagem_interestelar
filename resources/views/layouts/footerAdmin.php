@@ -23,17 +23,17 @@
         }
         var telMask = ['(99) 9999-9999','(99) 99999-9999'];
 
-		function maskPhone() {
-			let inputPhone = document.getElementById('cadastro__tell');
-			console.log(inputPhone);
-			if(inputPhone.value.length == 14) {
-				VMasker(inputPhone).maskPattern(telMask[0]);
-			}else if(inputPhone.value.length == 15) {
-				VMasker(inputPhone).maskPattern(telMask[1]);
-			}
-			inputPhone.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
-			inputPhone.addEventListener('change', inputHandler.bind(undefined, telMask, 14), false);
-		}
+        function maskPhone() {
+            let inputPhone = document.getElementById('cadastro__tell');
+            console.log(inputPhone);
+            if(inputPhone.value.length == 14) {
+                VMasker(inputPhone).maskPattern(telMask[0]);
+            }else if(inputPhone.value.length == 15) {
+                VMasker(inputPhone).maskPattern(telMask[1]);
+            }
+            inputPhone.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+            inputPhone.addEventListener('change', inputHandler.bind(undefined, telMask, 14), false);
+        }
 
         document.querySelectorAll('.footer-container').forEach(function (el) {
    

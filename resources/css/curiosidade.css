@@ -4,13 +4,14 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 main {
     width: 80%;
     min-height: 720px;
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
-    color:#505050;
+    color: #505050;
     display: flex;
     justify-content: space-between;
 }
@@ -19,14 +20,14 @@ article {
     text-align: center;
 }
 
-article h2{
+article h2 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 40px;
     color: rgb(59, 59, 59);
 }
 
-section { 
+section {
     text-align: justify;
     margin-bottom: 40px;
 }
@@ -50,9 +51,11 @@ section p {
 section a {
     color: rgb(44, 101, 255);
 }
+
 section a:hover {
     color: rgb(16, 60, 255);
 }
+
 section a:active {
     color: rgb(7, 40, 230);
 }
@@ -66,13 +69,16 @@ section a:active {
     width: 100%;
     padding-right: 30px;
 }
+
 .right-image div:last-of-type {
     padding-right: 0;
 }
+
 .right-image p {
     width: 100%;
     max-width: 900px;
 }
+
 .right-image img {
     width: 100%;
     max-width: 900px;
@@ -86,6 +92,7 @@ section a:active {
         display: flex;
         flex-wrap: wrap;
     }
+
     .right-image div:first-of-type {
         display: flex;
         margin-bottom: 50px;
@@ -93,42 +100,52 @@ section a:active {
         flex-direction: row-reverse;
         padding-right: 0;
     }
+
     .right-image div:first-of-type p {
         width: 30%;
         padding-right: 30px;
     }
+
     .right-image div:last-of-type {
         display: flex;
         flex-wrap: wrap;
     }
+
     .right-image div:last-of-type p {
         width: 30%;
         padding-left: 30px;
     }
+
     .right-image h3 {
         width: 100%;
     }
+
     .right-image img {
         height: auto;
         width: 70%;
     }
 }
+
 @media screen and (max-width: 1024px) {
     .right-image div {
         flex-direction: column;
     }
+
     .right-image div:first-of-type p {
         width: 100%;
         padding-right: 0;
     }
+
     .right-image div:last-of-type p {
         width: 100%;
         padding-left: 0;
     }
+
     .right-image img {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 720px) {
     main {
         width: 90%;
