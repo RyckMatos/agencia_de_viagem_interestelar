@@ -1,15 +1,15 @@
 <?php
     class MySql{
 
-		// function criarBanco() {
-		// 	$mysqli = self::conectar();
+		function criarBanco() {
+			$mysqli = self::conectar();
 			
-		// 	if($mysqli == null) {
-		// 		include('database\create_database.php');
-		// 	}else{
-		// 		include('database\create_users_table.php');
-		// 	}
-		// }
+			if($mysqli == null) {
+				include('database\create_database.php');
+			}else{
+				include('database\create_users_table.php');
+			}
+		}
 
 		private static $pdo;
 
