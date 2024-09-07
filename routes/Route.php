@@ -1,126 +1,76 @@
 <?php
-	namespace Routes;
-	
-	class Route
+
+namespace Routes;
+
+class Route
+{
+	public static $executed = false;
+
+	public static function isExecuted(): bool
 	{
-		public static $executed;
+		return self::$executed;
+	}
 
-		public static function isExecuted(){
-			return self::$executed;
+	public static function get(string $path, string $arg): ?bool
+	{
+		return self::handleRequest('GET', $path, $arg);
+	}
+
+	public static function post(string $path, string $arg): ?bool
+	{
+		return self::handleRequest('POST', $path, $arg);
+	}
+
+	private static function handleRequest(string $method, string $path, string $arg): ?bool
+	{
+		$url = isset($_GET['url']) ? $_GET['url'] : '/';
+		$url = self::normalizeUrl($url);
+		$path = self::normalizeUrl($path);
+
+		if ($_SERVER['REQUEST_METHOD'] === $method && $url === $path) {
+			$arg = explode('@', $arg);
+			return self::executeController($arg[0], $arg[1]);
 		}
 
-		public static function get($path,$arg){
-			$url = @$_GET['url'];
-			$arg = explode('@',$arg);
-
-			// if($path == ''){
-			// 	$path = '/';
-			// }
-			// if($url[0] != '/'){
-			// 	$url = '/'.$url;
-			// }
-			// if($url[strlen($url)-1] != '/'){
-			// 	$url.="/";
-			// }
-			// if($path[0] != '/'){
-			// 	$path = '/'.$path;
-			// }
-			// if($path[strlen($path)-1] != '/'){
-			// 	$path.="/";
-			// }
-
-			if($url == $path){
-				if(file_exists('app/Controllers/'.$arg[0].'.php')) {
-				    $className = 'App\Controllers\\'.$arg[0];
-					$controller = new $className();
-				    $controller->executar($arg[1]);
-				}else{
-				    die("Nao existe esse controlador!");
-				}
-				die();
-			}
-
-			$path = explode('/',$path);
-			$url = explode('/',$url);
-			$ok = true;
-			$par = [];
-
-			if(count($path) == count($url)){
-				foreach ($path as $key => $value) {
-					if($value == '?'){
-						if($url[$key] === '')
-							return;
-						$par[$key] = $url[$key];
-					}else if($url[$key] != $value){
-						$ok = false;
-						break;
-					}
-				}
-				if($ok){
-					self::$executed = true;
-					$arg($par);
-					return true;
-				}
-			}
+		// Comparação com parâmetros dinâmicos
+		$par = [];
+		if (self::matchRoute($path, $url, $par)) {
+			self::$executed = true;
+			$arg($par);
+			return true;
 		}
 
-		public static function post($path,$arg){
-			if(!empty($_POST)){
-				$url = @$_GET['url'];
-			$arg = explode('@',$arg);
+		return false;
+	}
 
-			// if($path == ''){
-			// 	$path = '/';
-			// }
-			// if($url[0] != '/'){
-			// 	$url = '/'.$url;
-			// }
-			// if($url[strlen($url)-1] != '/'){
-			// 	$url.="/";
-			// }
-			// if($path[0] != '/'){
-			// 	$path = '/'.$path;
-			// }
-			// if($path[strlen($path)-1] != '/'){
-			// 	$path.="/";
-			// }
+	private static function normalizeUrl(string $url): string
+	{
+		return '/' . trim($url, '/') . '/';
+	}
 
-			
-			if($url == $path){
-				if(file_exists('app/Controllers/'.$arg[0].'.php')) {
-				    $className = 'App\Controllers\\'.$arg[0];
-					$controller = new $className();
-				    $controller->executar($arg[1]);
-				}else{
-				    die("Nao existe esse controlador!");
-				}
-				die();
+	private static function matchRoute($path, $url, &$par)
+	{
+		$pattern = preg_replace('/\{[^\}]+\}/', '([^/]+)', $path);
+		if (preg_match('#^' . $pattern . '$#', $url, $matches)) {
+			array_shift($matches);
+			$par = $matches;
+			return true;
+		}
+		return false;
+	}
+
+	private static function executeController(string $controller, string $method)
+	{
+		$className = 'App\Controllers\\' . $controller;
+		if (class_exists($className)) {
+			$instance = new $className();
+			if (method_exists($instance, $method)) {
+				$instance->$method();
+			} else {
+				throw new Exception("Método {$method} não encontrado no controlador {$controller}");
 			}
-
-			$path = explode('/',$path);
-			$url = explode('/',$url);
-			$ok = true;
-			$par = [];
-			if(count($path) == count($url)){
-
-				foreach ($path as $key => $value) {
-					if($value == '?'){
-						if($url[$key] === '')
-							return;
-						$par[$key] = $url[$key];
-					}else if($url[$key] != $value){
-						$ok = false;
-						break;
-					}
-				}
-				if($ok){
-					self::$executed = true;
-					$arg($par);
-					return true;
-				}
-
-				}
-			}
+		} else {
+			throw new Exception("Controlador {$controller} não encontrado");
 		}
 	}
-?>
+}
