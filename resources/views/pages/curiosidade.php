@@ -101,7 +101,43 @@
         <section class="right-image">
             <div>
                 <h3>Uma estrada de leite no céu</h3>
-                <img src="https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2019/10/DTHalloween1024annotated2-550x363.jpg" alt="">
+                <img id="curiosidade1" src="<?php echo SITE_IMG?>/normal/curiosidade1_normal.jpg" alt="" >
+
+                <script>
+
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var selectElement = document.getElementById("daltonismo");
+                        if (selectElement) {
+                            selectElement.addEventListener("change", function() {
+                                var selectedOption = this.value;
+                                localStorage.setItem("opcaoDaltonismo", selectedOption);
+                                alterarImagemSpace(selectedOption);
+                            });
+
+                            var selectedOption = localStorage.getItem("opcaoDaltonismo");
+                            if (selectedOption) {
+                                selectElement.value = selectedOption;
+                                alterarImagemSpace(selectedOption);
+                            }
+                        } else {
+                            console.error("Elemento com ID 'daltonismo' não encontrado.");
+                        }
+                    });
+
+                    function alterarImagemSpace(opcao) {
+                        var imagem = document.getElementById("curiosidade1");
+                        var srcBase = "<?php echo SITE_IMG ?>";
+                        if (opcao === "protanopia") {
+                            imagem.src = srcBase + "/protanopia/curiosidade1_protanopia.jpg";
+                        } else if (opcao === "deuteranopia") {
+                            imagem.src = srcBase + "/deuteranopia/curiosidade1_deuteranopia.jpg";
+                        } else if (opcao === "tritanopia") {
+                            imagem.src = srcBase + "/tritanopia/curiosidade1_tritanopia.jpg";
+                        } else {
+                            imagem.src = srcBase + "/normal/curiosidade1_normal.jpg";
+                        }
+                    }
+                    </script>
                 <p>
                     A nossa galáxia foi batizada de Via Láctea por causa do seu
                     <b>aspecto esbranquiçado</b>. Os gregos antigos a chamaram assim porque
@@ -113,7 +149,43 @@
 
             <div>
                 <h3>Galáxia anciã</h3>
-                <img src="https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2019/10/FuegoMilkyWay_Rizzo_1080-550x345.jpg" alt="">
+                <img id="curiosidade2" src="<?php echo SITE_IMG?>/normal/curiosidade2_normal.jpg" alt="" >
+
+                <script>
+
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var selectElement = document.getElementById("daltonismo");
+                        if (selectElement) {
+                            selectElement.addEventListener("change", function() {
+                                var selectedOption = this.value;
+                                localStorage.setItem("opcaoDaltonismo", selectedOption);
+                                alterarImagemGalaxy(selectedOption);
+                            });
+
+                            var selectedOption = localStorage.getItem("opcaoDaltonismo");
+                            if (selectedOption) {
+                                selectElement.value = selectedOption;
+                                alterarImagemGalaxy(selectedOption);
+                            }
+                        } else {
+                            console.error("Elemento com ID 'daltonismo' não encontrado.");
+                        }
+                    });
+
+                    function alterarImagemGalaxy(opcao) {
+                        var imagem = document.getElementById("curiosidade2");
+                        var srcBase = "<?php echo SITE_IMG ?>";
+                        if (opcao === "protanopia") {
+                            imagem.src = srcBase + "/protanopia/curiosidade2_protanopia.jpg";
+                        } else if (opcao === "deuteranopia") {
+                            imagem.src = srcBase + "/deuteranopia/curiosidade2_deuteranopia.jpg";
+                        } else if (opcao === "tritanopia") {
+                            imagem.src = srcBase + "/tritanopia/curiosidade2_tritanopia.jpg";
+                        } else {
+                            imagem.src = srcBase + "/normal/curiosidade2_normal.jpg";
+                        }
+                    }
+                    </script>
                 <p>
                     O universo se formou há aproximadamente 13,8 bilhões de anos.
                     Os astrônomos calculam que nossa galáxia nasceu um pouco depois e que

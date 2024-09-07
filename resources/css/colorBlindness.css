@@ -1,0 +1,198 @@
+/* =============== DALTONISMO hr pag home =============== */
+
+/* Vermelho Original */
+.original-vermelho hr {
+    background-color: rgb(180, 0, 0);
+}
+
+/* Vermelho Protanopia */
+.protanopia-vermelho hr {
+    background-color: rgb(102, 56, 0);
+}
+
+/* Vermelho Deuteranopia */
+.deuteranopia-vermelho hr {
+    background-color: rgb(112, 78, 0);
+}
+
+/* Vermelho Tritanopia */
+.tritanopia-vermelho hr {
+    background-color: rgb(180, 90, 125);
+}
+
+/* =============== DALTONISMO svg pag login e cadastro =============== */
+
+/* Azul Original */
+.original-azul svg{
+    color: rgb(74, 164, 254);
+}
+
+/* Azul Protanopia */
+.protanopia-azul svg {
+    color: rgb(112, 135, 254);
+}
+
+/* Azul Deuteranopia */
+.deuteranopia-azul svg {
+    color: rgb(107, 124, 254);
+}
+
+/* Azul Tritanopia */
+.tritanopia-azul svg {
+    color: rgb(74, 119, 128);
+}
+
+/* =============== DALTONISMO button-learn-more pag home =============== */
+
+/* Protanope */
+.protanopia-home .button-learn-more {
+    background-color: rgb(103, 0, 0);
+}
+
+.protanopia-home .button-learn-more:hover {
+    background-color: rgb(97, 0, 0);
+}
+
+.protanopia-home .button-learn-more:active {
+    background-color: rgb(90, 0, 0);
+}
+
+/* Deuteranope */
+.deuteranopia-home .button-learn-more {
+    background-color: rgb(135, 0, 0);
+}
+
+.deuteranopia-home .button-learn-more:hover {
+    background-color: rgb(128, 0, 0);
+}
+
+.deuteranopia-home .button-learn-more:active {
+    background-color: rgb(120, 0, 0);
+}
+
+/* Tritanope */
+.tritanopia-home .button-learn-more {
+    background-color: rgb(180, 0, 32);
+}
+
+.tritanopia-home .button-learn-more:hover {
+    background-color: rgb(170, 0, 30);
+}
+
+.tritanopia-home .button-learn-more:active {
+    background-color: rgb(160, 0, 28);
+}
+
+/* =============== DALTONISMO main a:focus, main a:hover pag login e cadastro =============== */
+
+/* Protanope */
+.protanopia-login a:focus,
+.protanopia-login a:hover {
+    text-decoration: underline;
+    color: rgb(173, 154, 171);
+}
+
+/* Deuteranope */
+.deuteranopia-login a:focus,
+.deuteranopia-login a:hover {
+    text-decoration: underline;
+    color: rgb(190, 172, 171);
+}
+
+/* Tritanope */
+.tritanopia-login a:focus,
+.tritanopia-login a:hover {
+    text-decoration: underline;
+    color: rgb(171, 180, 200);
+}
+
+/* =============== DALTONISMO main input[type='submit'] pag login e cadastro =============== */
+
+/* Protanope */
+.protanopia-login input[type='submit'] {
+    border: 1px solid rgb(173, 139, 171);
+}
+
+.protanopia-login input[type='submit']:hover {
+    background-color: rgb(173, 154, 171);
+}
+
+.protanopia-login input[type='submit']:active {
+    background-color: rgb(173, 135, 171);
+}
+
+/* Deuteranope */
+.deuteranopia-login input[type='submit'] {
+    border: 1px solid rgb(190, 150, 171);
+}
+
+.deuteranopia-login input[type='submit']:hover {
+    background-color: rgb(190, 172, 171);
+}
+
+.deuteranopia-login input[type='submit']:active {
+    background-color: rgb(190, 155, 171);
+}
+
+/* Tritanope */
+.tritanopia-login input[type='submit'] {
+    border: 1px solid rgb(171, 200, 200);
+}
+
+.tritanopia-login input[type='submit']:hover {
+    background-color: rgb(171, 180, 200);
+}
+
+.tritanopia-login input[type='submit']:active {
+    background-color: rgb(171, 160, 200);
+}
+
+/* =============== DALTONISMO input[type=submit] pag sobre_nos, contato e suporte =============== */
+
+/* Protanope */
+.protanopia-sncs input[type=submit] {
+    background-color: rgb(115, 173, 90);
+    border: 1px solid rgb(115, 163, 90);
+}
+
+.protanopia-sncs input[type=submit]:hover {
+    background-color: rgb(115, 155, 90);
+    border: 1px solid rgb(115, 145, 90);
+}
+
+.protanopia-sncs input[type=submit]:active {
+    background-color: rgb(115, 135, 90);
+    border: 1px solid rgb(115, 125, 90);
+}
+
+/* Deuteranope */
+.deuteranopia-sncs input[type=submit] {
+    background-color: rgb(100, 170, 90);
+    border: 1px solid rgb(100, 160, 90);
+}
+
+.deuteranopia-sncs input[type=submit]:hover {
+    background-color: rgb(100, 150, 90);
+    border: 1px solid rgb(100, 140, 90);
+}
+
+.deuteranopia-sncs input[type=submit]:active {
+    background-color: rgb(100, 130, 90);
+    border: 1px solid rgb(100, 120, 90);
+}
+
+/* Tritanope */
+.tritanopia-sncs input[type=submit] {
+    background-color: rgb(90, 200, 200);
+    border: 1px solid rgb(90, 190, 190);
+}
+
+.tritanopia-sncs input[type=submit]:hover {
+    background-color: rgb(90, 180, 180);
+    border: 1px solid rgb(90, 170, 170);
+}
+
+.tritanopia-sncs input[type=submit]:active {
+    background-color: rgb(90, 160, 160);
+    border: 1px solid rgb(90, 150, 150);
+}
