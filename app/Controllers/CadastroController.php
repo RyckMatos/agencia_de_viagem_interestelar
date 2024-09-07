@@ -48,7 +48,6 @@
                     $queryInsert = $sql->prepare("INSERT INTO `users` (admin, status, token, nome, sobrenome, email, telefone, data_de_nascimento, genero, endereco, cidade, estado, pais, senha) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                     $queryInsert->execute(array(1, 1, $token, $registro['nome'], $registro['sobrenome'], $registro['email'], $registro['telefone'], 
                     $registro['nascimento'], $registro['genero'], $registro['endereco'], $registro['cidade'], $registro['estado'], $registro['pais'], $senha));
-
                     header('Location: /agencia_de_viagem_interestelar/');
                     die();
                 } else {

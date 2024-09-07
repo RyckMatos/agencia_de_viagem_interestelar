@@ -44,11 +44,13 @@ label, p {
     width: 50%;
 }
 
+
 .title-main {
     text-align: center;
     font-size: 26px;
     margin-bottom: 20px;
 }
+
 
 .form-ocorrencia, .form-formulario {
     margin-bottom: 20px;
@@ -63,6 +65,7 @@ label, p {
     font-size: 16px;
     padding: 5px;
 }
+
 
 .linha-ocorrencia {
     display: flex;

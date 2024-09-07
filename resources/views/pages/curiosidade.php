@@ -138,7 +138,6 @@
                         }
                     }
                     </script>
-            
                 <p>
                     A nossa galáxia foi batizada de Via Láctea por causa do seu
                     <b>aspecto esbranquiçado</b>. Os gregos antigos a chamaram assim porque
